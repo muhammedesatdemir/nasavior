@@ -8,3 +8,4 @@ data/raw/*.pdf
 .DS_Store
 
 plan.md
+data/raw/pdf/

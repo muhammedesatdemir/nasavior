@@ -1,6 +1,6 @@
 # Space Apps 2026 submission text (copy and paste)
 
-Fields marked `<<...>>` must be filled in by the team before submitting. Re-check every field name against the live project form; the names below follow the Project Submission Guide.
+Copy each section into the matching field of the project form. Re-check every field name against the live form; the names below follow the Project Submission Guide.
 
 ---
 
