@@ -56,6 +56,12 @@ code{{background:{TOKENS['pill_bg']};color:var(--blue);border-radius:3px;padding
 .kpi .v{{font-family:{MONO};font-size:24px;font-weight:500;font-variant-numeric:tabular-nums;margin:2px 0 4px}}
 .kpi .r{{font-size:11px;color:var(--mu);font-family:{MONO}}}
 
+/* capability strip */
+.cap{{background:var(--panel);border:1px solid var(--bd);border-top:2px solid var(--blue);border-radius:4px;padding:8px 12px;height:100%}}
+.cap .l{{font-family:{MONO};font-size:.74rem;letter-spacing:.08em;color:var(--blue);font-weight:600}}
+.cap .d{{font-size:.84rem;color:var(--tx);margin-top:2px}}
+.cap .w{{font-size:.74rem;color:var(--mu);margin-top:2px}}
+
 /* panel / row cards */
 .pn{{background:var(--panel);border:1px solid var(--bd);border-radius:4px;padding:10px 14px;margin-bottom:8px}}
 .pn.hot{{border-left:3px solid var(--hot)}}.pn.safe{{border-left:3px solid var(--safe)}}
@@ -122,3 +128,8 @@ def header_bar(env_label: str, g: float, o2: float, pressure_kpa: float) -> str:
             f'<span class="tag">O2: {o2:.1f}%</span><span class="tag">PRESS: {psi:.1f} psi</span>')
     return (f'<div class="hdr"><div class="t">NASAVIOR <span>//</span> MICROGRAVITY COMBUSTION &amp; FIRE SAFETY ATLAS</div>'
             f'<div>{tags}</div></div>')
+
+
+def cap(label: str, text: str, where: str) -> str:
+    return (f'<div class="cap"><div class="l">{esc(label)}</div><div class="d">{esc(text)}</div>'
+            f'<div class="w">{esc(where)}</div></div>')

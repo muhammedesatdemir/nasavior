@@ -31,6 +31,45 @@ class Passage:
     page: str
     kind: str      # finding | objective | measurement | impact
     source_id: str
+    search: str = ""   # keywords used for retrieval only; never shown
+
+
+_GRAV_KEYWORDS = {0.0: "microgravity 0g iss", 0.16: "lunar moon 0.16g", 0.38: "martian mars 0.38g", 1.0: "earth 1g normal gravity"}
+_LIMIT_DESC = {
+    "ULOI": "ULOI, lowest O2 at which the flame survived (1 g criteria)",
+    "MOC": "MOC, highest O2 at which the flame self-extinguished (1 g criteria)",
+    "ULOI_dropstar": "ULOI*, lowest O2 at which the flame survived the 5.18 s drop",
+    "MOC_dropstar": "MOC*, highest O2 at which the flame self-extinguished during the drop",
+    "blowoff_1g": "1 g blowoff limit",
+    "lowest_burn_ug": "lowest O2 with steady spread in 0 g",
+}
+_OUTCOME = {"burn": "flame spread", "no_spread": "ignited but did not spread", "anchored": "flame stayed anchored at the sample base",
+            "partial": "partial burn", "limit": "limit result", "no_ignition": "did not ignite", "extinguished": "extinguished"}
+_PLATFORM = {"ISS": "ISS", "Cygnus": "Cygnus flight", "drop_tower": "drop tower", "sounding_rocket": "sounding rocket",
+             "ground_1g": "ground test"}
+
+
+def _measurement_text(m) -> str:
+    """Human-readable statement built only from the record's own fields."""
+    head = f"{m['material']} at {G_LABEL[m['g_level']]} ({_PLATFORM.get(m['platform'], m['platform'])}): "
+    parts = []
+    if pd.notna(m["limiting_o2_pct"]):
+        parts.append(f"limiting O2 {m['limiting_o2_pct']:g} % ({_LIMIT_DESC.get(m['limit_definition'], m['limit_definition'])})")
+    else:
+        parts.append(_OUTCOME.get(m["outcome"], m["outcome"]))
+    cond = []
+    if pd.notna(m["o2_mole_pct"]):
+        cond.append(f"O2 {m['o2_mole_pct']:g} %")
+    if pd.notna(m["pressure_kpa"]):
+        cond.append(f"pressure {m['pressure_kpa']:g} kPa")
+    if pd.notna(m["flow_velocity_cm_s"]):
+        cond.append(f"flow {m['flow_velocity_cm_s']:g} cm/s")
+    if pd.notna(m["spread_rate_mm_s"]):
+        cond.append(f"spread rate {m['spread_rate_mm_s']:g} mm/s")
+    if pd.notna(m["flame_length_cm"]):
+        cond.append(f"flame length {m['flame_length_cm']:g} cm")
+    txt = head + parts[0] + ("; " + ", ".join(cond) if cond else "") + "."
+    return txt + (" " + m["note"] if m["note"] else "")
 
 
 @lru_cache(maxsize=1)
@@ -46,22 +85,9 @@ def _corpus() -> tuple[list[Passage], BM25Okapi]:
             ps.append(Passage(f"{head} impact: {i.impact[:500]}", f"REF-{i.inv_id}", "PSI record", "impact", i.inv_id))
     df = measurements_df()
     for _, m in df.iterrows():
-        bits = [m["material"], f"g={m['g_level']}", m["platform"], m["outcome"]]
-        if pd.notna(m["o2_mole_pct"]):
-            bits.append(f"O2 {m['o2_mole_pct']}%")
-        if pd.notna(m["pressure_kpa"]):
-            bits.append(f"{m['pressure_kpa']} kPa")
-        if pd.notna(m["flow_velocity_cm_s"]):
-            bits.append(f"flow {m['flow_velocity_cm_s']} cm/s")
-        if pd.notna(m["limiting_o2_pct"]):
-            bits.append(f"limiting O2 {m['limiting_o2_pct']}% ({m['limit_definition']})")
-        if pd.notna(m["spread_rate_mm_s"]):
-            bits.append(f"spread {m['spread_rate_mm_s']} mm/s")
-        gl = {0.0: "microgravity 0g iss", 0.16: "lunar moon 0.16g", 0.38: "martian mars 0.38g", 1.0: "earth 1g normal gravity"}[m["g_level"]]
-        ps.append(Passage(", ".join(bits) + f". {m['note']}", m["ref_id"], m["page_or_figure"], "measurement",
-                          m["meas_id"]))
-        ps[-1].text += f" [{gl}]"
-    bm = BM25Okapi([_tok(p.text) for p in ps])
+        ps.append(Passage(_measurement_text(m), m["ref_id"], m["page_or_figure"], "measurement", m["meas_id"],
+                          search=_measurement_text(m) + " " + _GRAV_KEYWORDS[m["g_level"]] + " " + str(m["platform"])))
+    bm = BM25Okapi([_tok(p.search or p.text) for p in ps])
     return ps, bm
 
 
@@ -113,13 +139,20 @@ def _unmatched_terms(question: str) -> list[str]:
 
 def answer(question: str, k: int = 5) -> dict:
     """Returns {'status': 'ok'|'no_data', 'summary': str, 'evidence': [Passage...], 'notes': [str]}."""
+    question = (question or "").strip()[:500]
+    toks = _tok(question)
+    if not toks:
+        return {"status": "no_data", "summary": "Enter a question using words about a NASA experiment, material or gravity level.",
+                "evidence": [], "notes": []}
     ps, bm = _corpus()
-    scores = bm.get_scores(_tok(question))
+    scores = bm.get_scores(toks)
     order = sorted(range(len(ps)), key=lambda i: scores[i], reverse=True)
     g, o2 = _gravity_in(question), _o2_in(question)
     notes: list[str] = []
 
     def keep(p: Passage) -> bool:
+        if g is not None and p.kind in ("impact", "objective"):
+            return False
         if p.kind != "measurement" or g is None:
             return True
         row = measurements_df().set_index("meas_id").loc[p.source_id]
@@ -150,7 +183,7 @@ def answer(question: str, k: int = 5) -> dict:
 
     missing = _unmatched_terms(question)
     if missing:
-        notes.insert(0, "The dataset has no record mentioning: " + ", ".join(missing) +
+        notes.insert(0, "The dataset has no record mentioning: " + ", ".join(missing[:5]) +
                      ". Results below are the closest related records, not an answer about those terms.")
     if not picked:
         return {"status": "no_data", "summary": "No NASA record in the Nasavior dataset matches this question. "
@@ -162,10 +195,10 @@ def answer(question: str, k: int = 5) -> dict:
 
 
 EXAMPLES = [
-    "Is there data for cable insulation at 0.38 g and 26 % oxygen?",
-    "What happened to silicone samples in microgravity?",
-    "Which experiments studied Lunar gravity?",
-    "What oxygen level did PMMA burn at in BASS-II?",
-    "What happened to Nomex in Saffire-II?",
-    "Which experiments are relevant to smoke detection?",
+    "Cable insulation at 0.38 g, 26 % O2?",
+    "Silicone samples in microgravity?",
+    "Experiments at Lunar gravity?",
+    "PMMA oxygen limit in BASS-II?",
+    "Nomex in Saffire-II?",
+    "Experiments on smoke detection?",
 ]

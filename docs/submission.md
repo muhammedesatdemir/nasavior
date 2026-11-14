@@ -38,6 +38,10 @@ Nasavior is an interactive atlas of NASA microgravity combustion experiments for
 - *Ask the Atlas:* a search box over the dataset. Answers are copied from records and show their source; if nothing matches, or the question names something the dataset never mentions (for example cable insulation), it says so.
 - *Earth benefits:* NASA PSI's own statements of terrestrial benefit.
 
+**How it meets the challenge.** The challenge asks for a tool that summarizes, ranks and interprets NASA combustion experiments. Nasavior summarizes (a rule-assembled, cited summary for the chosen environment, plus an Atlas of 26 experiments), ranks (experiments ordered by how well their recorded conditions match the user's gravity, oxygen, pressure and flow, with reasons) and interprets (the user's oxygen level against limits NASA measured at the same gravity, 0 g versus 1 g comparison, and the Moon and Mars data gap). It covers the four target environments named by the challenge (station, Moon base, Mars habitat, pressurized rover) and the optional Earth-benefit angle.
+
+**Why it matters.** Engineers choosing materials for crewed vehicles and habitats need to know quickly what NASA has tested and, just as important, what it has not. Nasavior shows both in one place, with every value traceable to its page, and turns the absence of Moon and Mars data into an explicit research gap that points to the experiments NASA still has to run.
+
 **Findings the data supports.**
 - BASS-II on the ISS: a PMMA rod kept burning at 13.6 % oxygen in microgravity, while its 1 g blowoff limit is 16 %, a negative margin of 2.4 % oxygen.
 - Saffire-II: silicone samples from 0.27 to 1.03 mm did not spread a flame in microgravity at 20 cm/s although the thinnest one burned completely in 1 g. Reduced gravity is not always worse, which is why a per-material, per-gravity view matters.
@@ -56,7 +60,7 @@ Nasavior is an interactive atlas of NASA microgravity combustion experiments for
 
 All data are NASA public documents. References with links are in `data/references.json` and in the About tab of the app.
 
-Third-party software: Streamlit, Plotly, pandas, NumPy, pydantic, PyYAML, rank-bm25, scikit-learn, pytest (open source). Fonts: Inter and JetBrains Mono (Google Fonts, open license). No NASA logos or branding are used. No images are used.
+Third-party software: Streamlit, Plotly, pandas, NumPy, pydantic, PyYAML, rank-bm25 (run time) and pytest (development), all open source. Fonts: Inter and JetBrains Mono (Google Fonts, open license). No NASA logos or branding are used. The only images are screenshots of the application itself.
 
 ## Known Limitations
 

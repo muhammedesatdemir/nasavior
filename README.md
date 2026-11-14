@@ -8,6 +8,25 @@ Nasavior lets an engineer pick a target environment (ISS, Lunar base, Martian ha
 
 Every number on screen is transcribed from a NASA document and shown with its reference and page. Nothing is estimated, interpolated or generated.
 
+## How it answers the challenge
+
+The challenge asks for a tool that **summarizes, ranks and interprets** NASA combustion experiments. All three are on the first screen.
+
+| Challenge asks | Where in Nasavior |
+|---|---|
+| Summarize | "Summary for the selected environment" on Overview: rule-assembled sentences, each with its source; Atlas of 26 experiments with objectives and cited findings |
+| Rank | "Most relevant experiments": ordered by how many cited records match the selected gravity, O2, pressure and flow, with the reasons shown |
+| Interpret | "Measured limits at the selected gravity" (your O2 against NASA's measured limits), 0 g vs 1 g comparison, oxygen margin of safety, and the Moon/Mars data-gap analysis |
+| Find experiments for a station, Moon base, Mars habitat or pressurized rover | Environment selector with five presets and their sources |
+| Highlight research for next-generation fire equipment | Atlas themes (material flammability, smoke detection, suppression) and the equipment column |
+| Terrestrial applications | "Earth benefits" tab, copied from PSI |
+
+![Overview, ISS](docs/screenshots/01-overview-iss.png)
+![Flammability](docs/screenshots/02-flammability.png)
+![Overview, Lunar base](docs/screenshots/03-overview-lunar.png)
+![Lunar and Mars data gap](docs/screenshots/04-lunar-mars-gap.png)
+![Ask the Atlas](docs/screenshots/05-ask-the-atlas.png)
+
 ## What it shows
 
 | Tab | Content |
@@ -29,7 +48,7 @@ Every number on screen is transcribed from a NASA document and shown with its re
 
 ## Run it
 
-Requires Python 3.13 (3.10 is end-of-life and not supported by Streamlit Community Cloud).
+Developed and tested on Python 3.13. Use a currently supported Python version when deploying. The app needs no API key, no network access at run time and no secrets.
 
 ```bash
 python -m venv .venv
@@ -41,14 +60,15 @@ streamlit run app.py
 Run the checks:
 
 ```bash
+pip install -r requirements-dev.txt
 python scripts/validate_data.py   # schema, reference integrity, null policy
-python -m pytest -q               # engine, Q&A, data, design and app smoke tests
+python -m pytest -q               # 94 tests: data, engine, Q&A, edge cases, design, deploy readiness, app smoke tests
 ```
 
 ### Deploy (Streamlit Community Cloud)
 
 1. Push the repository to GitHub (public).
-2. On share.streamlit.io choose the repository, branch `main`, main file `app.py`, and Python 3.13.
+2. On share.streamlit.io choose the repository, branch `main` and main file `app.py`, and pick Python 3.13 (the version tested here) in the advanced settings.
 3. No secrets are needed: the app uses no external API.
 
 ## Data honesty
@@ -85,7 +105,7 @@ src/ui/charts.py            Plotly figures
 data/                       investigations.json, measurements.csv, references.json, environments.yaml, PROVENANCE.md
 data/raw/                   PSI metadata dump and extracted source text
 scripts/                    fetch_psi.py, build_investigations.py, build_measurements.py, validate_data.py
-tests/                      data, engine, Q&A, design and app tests
+tests/                      data, engine, Q&A, robustness, design and app tests
 docs/submission.md          Text for the Space Apps project page
 ```
 

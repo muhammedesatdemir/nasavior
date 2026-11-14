@@ -42,7 +42,7 @@ for (label, g, d, plat), vals in table.items():
             note += " 0g tests used concurrent forced flow of 30 cm/s."
         if g == 0.16:
             note += " Lunar-g values are carried from Ferkul & Olson 2011 as tabulated in this paper."
-        add(meas_id=f"M-OF12-{n:03d}", inv_id="", material=m, thickness_mm=th,
+        add(meas_id=f"M-OF12-{n:03d}", inv_id="NTRS-PARTIALG", material=m, thickness_mm=th,
             geometry="fabric" if m == "Nomex HT90-40" else "film", spread_mode="concurrent", g_level=g,
             platform=plat, test_duration_s=5.18 if plat == "drop_tower" else "",
             pressure_kpa=round(psia * PSI2KPA, 1), flow_velocity_cm_s=30 if g == 0.0 else "", outcome="limit",
@@ -106,28 +106,28 @@ add(meas_id="M-SF123-2-7-0G", inv_id="PSI-99", material="PMMA (5 cm) + Nomex HT9
 
 # ---- Saffire IV/V (NTRS 20210011521) Table 1 (p.3), Table 2 (p.8), text p.9 ----
 S45 = "REF-SAFFIRE45"
-add(meas_id="M-SF45-IV1", inv_id="", material="Cotton-fiberglass (SIBAL) fabric", geometry="fabric",
+add(meas_id="M-SF45-IV1", inv_id="NTRS-SAFFIRE456", material="Cotton-fiberglass (SIBAL) fabric", geometry="fabric",
     spread_mode="concurrent", g_level=0.0, platform="Cygnus", pressure_kpa=100.0, o2_mole_pct=22.0,
     flow_velocity_cm_s=20, outcome="burn", flame_length_cm=8.5, evidence_tier="A", ref_id=S45,
     page_or_figure="Table 1 (p.3), Table 2 (p.8)",
     note="Steady-state flame size 8.5 cm (max 11.0 cm); duct height 30 cm; 41 cm wide, 50 cm long. "
          "Flight Saffire IV, sample 1.")
-add(meas_id="M-SF45-IV2", inv_id="", material="PMMA (two-sided)", geometry="thick_slab", spread_mode="concurrent",
+add(meas_id="M-SF45-IV2", inv_id="NTRS-SAFFIRE456", material="PMMA (two-sided)", geometry="thick_slab", spread_mode="concurrent",
     g_level=0.0, platform="Cygnus", pressure_kpa=100.0, o2_mole_pct=22.0, flow_velocity_cm_s=20,
     outcome="anchored", flame_length_cm=9.5, evidence_tier="A", ref_id=S45, page_or_figure="Table 1 (p.3), p.8-9",
     note="Did not spread appreciably; flame stayed at leading edge; flame grew to 9.5 cm after 400 s then "
          "reached a limiting length. 18 cm sample. Flight Saffire IV, sample 2.")
-add(meas_id="M-SF45-V2", inv_id="", material="Cotton jersey", geometry="fabric", spread_mode="concurrent",
+add(meas_id="M-SF45-V2", inv_id="NTRS-SAFFIRE456", material="Cotton jersey", geometry="fabric", spread_mode="concurrent",
     g_level=0.0, platform="Cygnus", pressure_kpa=70.7, o2_mole_pct=26.2, flow_velocity_cm_s=20, outcome="burn",
     flame_length_cm=10.0, evidence_tier="A", ref_id=S45, page_or_figure="Table 1 (p.3), Table 2 (p.8)",
     note="Steady-state flame size 10.0 cm (max 14.0 cm); duct height 30 cm. Exploration-like atmosphere. "
          "Flight Saffire V, sample 2.")
-add(meas_id="M-SF45-V3", inv_id="", material="PMMA (one-sided)", geometry="thick_slab", spread_mode="concurrent",
+add(meas_id="M-SF45-V3", inv_id="NTRS-SAFFIRE456", material="PMMA (one-sided)", geometry="thick_slab", spread_mode="concurrent",
     g_level=0.0, platform="Cygnus", pressure_kpa=71.3, o2_mole_pct=25.4, flow_velocity_cm_s=20,
     outcome="anchored", flame_length_cm=11.0, evidence_tier="A", ref_id=S45, page_or_figure="Table 1 (p.3), p.9",
     note="Did not spread appreciably; flame grew to 11 cm after 450 s then reached a limiting length. "
          "Flight Saffire V, sample 3.")
-add(meas_id="M-SF45-V4", inv_id="", material="Structured PMMA", geometry="thick_slab", spread_mode="opposed",
+add(meas_id="M-SF45-V4", inv_id="NTRS-SAFFIRE456", material="Structured PMMA", geometry="thick_slab", spread_mode="opposed",
     g_level=0.0, platform="Cygnus", pressure_kpa=72.6, o2_mole_pct=25.7, flow_velocity_cm_s=20, outcome="burn",
     evidence_tier="A", ref_id=S45, page_or_figure="Table 1 (p.3)",
     note="Opposed flow, 20 cm sample with ribs. Ignition included a deflagration (p.7). Flight Saffire V, sample 4.")
@@ -137,7 +137,7 @@ S6 = "REF-SAFFIRE6"
 for sid, mat, geo, p, o2 in [("VI2", "Cotton-fiberglass (SIBAL) fabric", "fabric", 54.1, 31.0),
                              ("VI3", "PMMA (two-sided)", "thick_slab", 54.6, 30.3),
                              ("VI4", "PMMA (one-sided)", "thick_slab", 55.2, 28.8)]:
-    add(meas_id=f"M-SF6-{sid}", inv_id="", material=mat, geometry=geo, spread_mode="concurrent", g_level=0.0,
+    add(meas_id=f"M-SF6-{sid}", inv_id="NTRS-SAFFIRE456", material=mat, geometry=geo, spread_mode="concurrent", g_level=0.0,
         platform="Cygnus", pressure_kpa=p, o2_mole_pct=o2, flow_velocity_cm_s=20, outcome="burn",
         evidence_tier="A", ref_id=S6, page_or_figure="Table 1 (p.3)",
         note="Saffire VI, 41 cm wide samples. Source reports fire heat release of 1.5-3.2 kW across Saffire VI "

@@ -140,11 +140,18 @@ def paired_comparison(df: pd.DataFrame | None = None) -> pd.DataFrame:
 
     def verdict(r):
         a, b = r["outcome_0g"], r["outcome_1g"]
-        if a in ("no_spread",) and b in ("burn", "partial"):
-            return "Burned in 1g, did NOT spread in 0g"
-        if a in ("burn", "anchored", "partial") and b == "no_spread":
-            return "Burned in 0g, did NOT spread in 1g"
-        return "Spread in both"
+        spread = ("burn", "partial")
+        if a == "no_spread" and b == "no_spread":
+            return "No spread in either"
+        if a == "no_spread" and b in spread:
+            return "Burned in 1g only"
+        if a in spread and b == "no_spread":
+            return "Burned in 0g only"
+        if a == "anchored" and b in spread:
+            return "0g: flame anchored; 1g: spread"
+        if a in spread and b in spread:
+            return "Spread in both"
+        return "See outcomes"
     if not out.empty:
         out["verdict"] = out.apply(verdict, axis=1)
     return out
@@ -169,7 +176,7 @@ def coverage_matrix(df: pd.DataFrame | None = None) -> pd.DataFrame:
             "with_pressure_le_70kPa": int((d["pressure_kpa"] <= 70.35).sum()),
             "ambient_o2_ge_30": int((tested["o2_mole_pct"] >= 30).sum()),
             "lunar_envelope_tests": int(in_lunar_envelope(d).sum()),
-            "long_duration_gt_60s": int((d["platform"].isin(["ISS", "Cygnus"])).sum()),
+            "flight_platform_records": int((d["platform"].isin(["ISS", "Cygnus"])).sum()),
         })
     return pd.DataFrame(rows)
 
@@ -179,14 +186,51 @@ def gap_statements(df: pd.DataFrame | None = None) -> list[str]:
     out = []
     for g in (0.16, 0.38):
         r = cov.loc[g]
-        out.append(f"{G_LABEL[g]}: {int(r['records'])} source-cited records, all from 5-second drop-tower tests; "
-                   f"{int(r['lunar_envelope_tests'])} tests inside the lunar atmosphere envelope "
-                   f"(O2 >= 30 %, P <= 70.3 kPa) with measured ambient conditions.")
+        out.append(f"{G_LABEL[g]}: {int(r['records'])} source-cited records, all oxygen-limit results from "
+                   f"5-second drop-tower tests; {int(r['lunar_envelope_tests'])} records with an ambient test "
+                   f"condition inside the lunar atmosphere envelope (O2 >= 30 %, P <= 70.3 kPa).")
     z = cov.loc[0.0]
-    out.append(f"{G_LABEL[0.0]}: {int(z['records'])} records; {int(z['lunar_envelope_tests'])} inside the lunar "
-               f"atmosphere envelope (Saffire VI flights).")
+    out.append(f"{G_LABEL[0.0]}: {int(z['records'])} records; {int(z['lunar_envelope_tests'])} with an ambient test "
+               f"condition inside the lunar atmosphere envelope (Saffire VI flights, which were in microgravity, not lunar gravity).")
     out.append("No record in this dataset measures flame spread in long-duration partial gravity "
-               "(FM2 lunar-surface test is planned; see Atlas entry NTRS-PARTIALG).")
+               "(the FM2 lunar-surface experiment is planned; see Atlas entry NTRS-PARTIALG). "
+               "This describes this dataset, not everything NASA may hold.")
+    return out
+
+
+def summary_points(state: State) -> list[tuple[str, list[tuple[str, str]]]]:
+    """Deterministic, citation-bound summary of what the dataset says for the selected state.
+    Each item: (sentence, [(ref_id, page), ...]). No generative text."""
+    df = measurements_df()
+    out: list[tuple[str, list[tuple[str, str]]]] = []
+    mm = material_margins(state)
+    if mm.empty:
+        out.append((f"No oxygen-limit measurement exists at {G_LABEL.get(state.g, state.g)} in this dataset; "
+                    "limits from other gravity levels are not substituted.", []))
+    else:
+        lims = ", ".join(f"{r.material} {r.uloi:g} %" for r in mm.itertuples())
+        above = int((mm["status"] == "burns").sum())
+        out.append((f"At {G_LABEL[state.g]} NASA measured survive-limits (lowest O2 at which the flame lasted) of {lims}. "
+                    f"Your {state.o2:g} % O2 is at or above the survive-limit for {above} of {len(mm)} materials.",
+                    [("REF-OLSON2012", "Table I, p.6")]))
+    if state.g == 0.0:
+        out.append(("BASS-II on the ISS sustained steady PMMA rod spread at 13.6 % O2 in microgravity, versus a 1 g blowoff "
+                    "limit of 16 % O2.", [("REF-BASS2-POSTER", "p.18")]))
+        out.append(("In Saffire-II, silicone samples of 0.27 to 1.03 mm did not spread in microgravity at 20 cm/s, although "
+                    "the thinnest burned completely in 1 g: reduced gravity is not uniformly worse.",
+                    [("REF-SAFFIRE123", "Table I, p.29")]))
+    elif state.g in (0.16, 0.38):
+        n = int((df["g_level"] == state.g).sum())
+        out.append((f"This dataset holds {n} records at {state.g:g} g, all 5-second drop-tower limits; none describe "
+                    "long-duration flame spread in this gravity.", [("REF-OLSON2012", "Table I, p.6")]))
+        out.append(("NASA reports that some materials burn at lower oxygen in partial gravity than in 1 g, and plans FM2, the "
+                    "first combustion experiments on the Moon.", [("REF-FERKUL2026", "p.1")]))
+    else:
+        out.append(("Earth (1 g) is the baseline of the NASA-STD-6001 Test 1 screen. In BASS-II the 1 g blowoff limit of the "
+                    "PMMA rod was 16 % O2.", [("REF-BASS2-POSTER", "p.18")]))
+    top = [r for r in relevance(state).head(3).itertuples() if r.score > 0]
+    if top:
+        out.append(("Experiments whose recorded conditions best match your selection: " + "; ".join(r.name for r in top) + ".", []))
     return out
 
 
@@ -209,7 +253,8 @@ def relevance(state: State, df: pd.DataFrame | None = None) -> pd.DataFrame:
         pm = d["pressure_kpa"].sub(state.pressure_kpa).abs() <= TOL_P
         fm = pd.Series(False, index=d.index) if state.flow_cm_s is None else \
             d["flow_velocity_cm_s"].sub(state.flow_cm_s).abs() <= TOL_FLOW
-        score = 3 * int(gm.any()) + 2 * int(o2m.any()) + 1 * int(pm.any()) + 1 * int(fm.any())
+        flight = bool((gm & d["platform"].isin(["ISS", "Cygnus"])).any())
+        score = 3 * int(gm.any()) + 2 * int(o2m.any()) + 1 * int(pm.any()) + 1 * int(fm.any()) + int(flight)
         reasons = []
         if gm.any():
             reasons.append(f"{int(gm.sum())} record(s) at g = {state.g}")
@@ -219,6 +264,8 @@ def relevance(state: State, df: pd.DataFrame | None = None) -> pd.DataFrame:
             reasons.append(f"pressure within +/-{TOL_P:g} kPa ({int(pm.sum())})")
         if fm.any():
             reasons.append(f"flow within +/-{TOL_FLOW:g} cm/s ({int(fm.sum())})")
+        if flight:
+            reasons.append("long-duration flight data")
         rows.append({"inv_id": inv_id, "name": i.name, "score": score,
                      "reasons": "; ".join(reasons) or "Records exist but none match the selected conditions",
                      "records": len(d), "theme": i.theme})

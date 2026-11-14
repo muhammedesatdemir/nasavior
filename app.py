@@ -4,11 +4,11 @@ import pandas as pd
 import streamlit as st
 
 from src.engine import (G_LABEL, STATUS_TEXT, State, coverage_matrix, environments, gap_statements, gravity_margin,
-                        investigations, material_margins, measurements_df, paired_comparison, relevance)
+                        investigations, material_margins, measurements_df, paired_comparison, relevance, summary_points)
 from src.models import load_references
 from src.qa import EXAMPLES, answer
 from src.ui import charts
-from src.ui.theme import PLOT_CFG, REF_SHORT, esc, header_bar, inject_css, kpi, note, pill
+from src.ui.theme import PLOT_CFG, cap, esc, header_bar, inject_css, kpi, note, pill
 
 st.set_page_config(page_title="Nasavior | Flame in Freefall", page_icon=None, layout="wide",
                    initial_sidebar_state="expanded")
@@ -28,6 +28,15 @@ STATUS_UI = {"burns": ("hot", "[FLAMMABLE IN TESTS]"), "uncertain": ("cau", "[UN
 def cite(ref_id: str, page: str) -> str:
     r = REFS.get(ref_id)
     return pill(ref_id, page, r.url if r else None)
+
+
+def tidy(d: pd.DataFrame) -> pd.DataFrame:
+    """Display copy: missing values shown as an em dash, never as None or nan."""
+    def fmt(v):
+        if v is None or (isinstance(v, float) and pd.isna(v)):
+            return "—"
+        return f"{v:g}" if isinstance(v, float) else str(v)
+    return d.map(fmt)
 
 
 def mono(x: object) -> str:
@@ -66,6 +75,14 @@ tabs = st.tabs(["Overview", "Flammability", "Investigation Atlas", "Lunar & Mars
 
 # ------------------------------------------------------------------ Overview
 with tabs[0]:
+    cc = st.columns(3)
+    cc[0].markdown(cap("SUMMARIZE", "Condenses 26 NASA experiments and 55 cited records into a summary for your environment.",
+                       "Summary below | Investigation Atlas tab"), unsafe_allow_html=True)
+    cc[1].markdown(cap("RANK", "Orders experiments by how closely their recorded conditions match your gravity, O2, pressure and flow.",
+                       "Most relevant experiments below"), unsafe_allow_html=True)
+    cc[2].markdown(cap("INTERPRET", "Compares your oxygen level with limits NASA measured at the same gravity, and shows where data is missing.",
+                       "Measured limits below | Lunar & Mars gap tab"), unsafe_allow_html=True)
+    st.markdown('<div style="height:10px"></div>', unsafe_allow_html=True)
     mm = material_margins(state)
     at_g = df[df["g_level"] == state.g]
     n_hot = int((mm["status"] == "burns").sum()) if not mm.empty else 0
@@ -86,6 +103,14 @@ with tabs[0]:
                 'a material is safe in space.</span><div class="sub">NASA screens spacecraft materials with a 1 g test '
                 '(NASA-STD-6001 Test 1). The measurements here show materials that kept burning at lower oxygen in '
                 'reduced gravity, and materials that did not spread in 0 g at all.</div></div>', unsafe_allow_html=True)
+
+    st.markdown("### Summary for the selected environment")
+    for sent, rs in summary_points(state):
+        st.markdown(f'<div class="pn"><div>{esc(sent)}</div>' + (f'<div style="margin-top:4px">{"".join(cite(r, p) for r, p in rs)}</div>' if rs else "") + '</div>',
+                    unsafe_allow_html=True)
+    st.markdown('<div class="sub">Summary sentences are assembled by rule from the cited dataset, not generated. '
+                'Measured limits apply to the specific materials, geometries and test criteria in the cited tables; this is '
+                'a research aid, not a flight-certification tool.</div>', unsafe_allow_html=True)
 
     c1, c2 = st.columns([1.1, 1])
     with c1:
@@ -116,28 +141,34 @@ with tabs[0]:
     gm = pd.concat([gravity_margin(m) for m in ["Mylar G", "Ultem 1000", "Nomex HT90-40"]])
     gm["gravity"] = gm["g_level"].map(G_LABEL)
     tbl = gm.pivot(index="material", columns="gravity", values="delta_o2")
-    st.dataframe(tbl, use_container_width=True)
+    st.dataframe(tidy(tbl), width="stretch")
     st.markdown('<div class="sub">Mean low-g limit minus mean 1 g limit (Eq. 1). Negative: burns at lower O2 than the 1 g test '
                 'suggests.</div>' + cite("REF-OLSON2012", "Table I + Eq. 1, p.6"), unsafe_allow_html=True)
 
 # ------------------------------------------------------------------ Flammability
 with tabs[1]:
-    st.plotly_chart(charts.limits_by_gravity(state), use_container_width=True, config=PLOT_CFG)
-    st.markdown(cite("REF-OLSON2012", "Table I, p.6") + '<span class="sub"> Mylar and Ultem tested at 70.3 kPa, Nomex at 101.3 kPa. '
-                'Reduced-g criteria are for 5 s drop tests; 0 g tests used 30 cm/s concurrent flow.</span>', unsafe_allow_html=True)
+    st.plotly_chart(charts.limits_by_gravity(state), width="stretch", config=PLOT_CFG)
+    st.markdown(cite("REF-OLSON2012", "Table I, p.6") + '<span class="sub"> ULOI = lowest O2 at which the flame survived; MOC = highest O2 at which it '
+                'self-extinguished. Mylar and Ultem tested at 70.3 kPa, Nomex at 101.4 kPa. Reduced-g criteria are for 5 s drop tests; '
+                '0 g tests used 30 cm/s concurrent flow.</span>', unsafe_allow_html=True)
     c1, c2 = st.columns(2)
     with c1:
-        st.plotly_chart(charts.o2_flow_map(state), use_container_width=True, config=PLOT_CFG)
+        st.plotly_chart(charts.o2_flow_map(state), width="stretch", config=PLOT_CFG)
         st.markdown(cite("REF-SAFFIRE123", "Table I, p.29") + cite("REF-SAFFIRE45", "Table 1, p.3") +
-                    cite("REF-SAFFIRE6", "Table 1, p.3"), unsafe_allow_html=True)
+                    cite("REF-SAFFIRE6", "Table 1, p.3") + '<div class="sub">Each marker is one flight sample (Saffire I-VI); hover for source. '
+                    'Dashed lines show your selection.</div>', unsafe_allow_html=True)
     with c2:
-        st.plotly_chart(charts.paired_spread(), use_container_width=True, config=PLOT_CFG)
-        st.markdown(cite("REF-SAFFIRE123", "Table I, p.29"), unsafe_allow_html=True)
+        st.plotly_chart(charts.paired_spread(), width="stretch", config=PLOT_CFG)
+        st.markdown(cite("REF-SAFFIRE123", "Table I, p.29") + '<div class="sub">Bars of 0 mean no steady spread rate was reported or the flame did not '
+                    'spread. Silicone burned in 1 g but did not spread in 0 g.</div>', unsafe_allow_html=True)
     st.markdown("### 0 g versus 1 g, sample by sample")
     p = paired_comparison()
     show = p[["sample", "material", "thickness_mm", "mode", "outcome_0g", "outcome_1g", "spread_0g_mm_s", "spread_1g_mm_s", "verdict"]].copy()
     show["source"] = "[Ref: Saffire I-III, Table I p.29]"
-    st.dataframe(show, use_container_width=True, hide_index=True)
+    st.dataframe(tidy(show), width="stretch", hide_index=True,
+                 column_config={"verdict": st.column_config.TextColumn("verdict", width="large"),
+                                "material": st.column_config.TextColumn("material", width="medium"),
+                                "source": st.column_config.TextColumn("source", width="medium")})
     st.markdown('<div class="pn safe"><span class="h">BASS-II, PMMA 1/4 in. rod on the ISS</span>'
                 f'<div class="sub">Steady spread at {mono("13.6% O2")} in 0 g versus a 1 g blowoff limit of {mono("16% O2")}: '
                 f'negative margin of {mono("2.4% O2")}.</div>' + cite("REF-BASS2-POSTER", "p.18") + '</div>', unsafe_allow_html=True)
@@ -148,9 +179,10 @@ with tabs[2]:
     st.markdown('<div class="sub">24 NASA PSI investigations (metadata copied from PSI) and 2 entries from NTRS papers that '
                 'PSI does not hold.</div>', unsafe_allow_html=True)
     f1, f2, f3 = st.columns([2, 1.2, 1])
-    q = f1.text_input("Search name, objective or finding", placeholder="smoke, Saffire, PMMA, cool flame")
+    q = f1.text_input("Search name, objective or finding", placeholder="smoke, Saffire, PMMA, cool flame", max_chars=100)
     themes = sorted({i.theme for i in INV.values()})
-    th = f2.multiselect("Theme", themes, default=themes, format_func=lambda t: t.replace("_", " "))
+    th_sel = f2.selectbox("Theme", ["all themes"] + themes, format_func=lambda t: t.replace("_", " "))
+    th = themes if th_sel == "all themes" else [th_sel]
     only_q = f3.checkbox("Only with cited findings", value=False)
     rows = []
     for i in INV.values():
@@ -160,7 +192,7 @@ with tabs[2]:
         rows.append({"ID": i.inv_id, "Experiment": i.name, "Acronym": i.acronym, "Platform": i.platform,
                      "Hardware": i.hardware, "Theme": i.theme.replace("_", " "), "Equipment": i.equipment_theme,
                      "Cited findings": len(i.key_findings), "Records": int((df["inv_id"] == i.inv_id).sum())})
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True, height=300)
+    st.dataframe(tidy(pd.DataFrame(rows)), width="stretch", hide_index=True, height=360)
     st.markdown(f'<div class="sub">{len(rows)} of {len(INV)} shown</div>', unsafe_allow_html=True)
     for i in [INV[r["ID"]] for r in rows]:
         with st.expander(f"{i.inv_id}  |  {i.name}"):
@@ -185,7 +217,7 @@ with tabs[2]:
 # ------------------------------------------------------------------ Gap
 with tabs[3]:
     st.markdown("### Where NASA data is missing for the Moon and Mars")
-    st.plotly_chart(charts.coverage_heatmap(), use_container_width=True, config=PLOT_CFG)
+    st.plotly_chart(charts.coverage_heatmap(), width="stretch", config=PLOT_CFG)
     for s in gap_statements():
         st.markdown(f'<div class="nt"><b>[GAP]</b> {esc(s)}</div>', unsafe_allow_html=True)
     st.markdown('<div class="pn blue" style="margin-top:10px"><span class="h">Why this matters</span><div class="sub">NASA reports '
@@ -203,9 +235,9 @@ with tabs[4]:
                 'no text is generated. If nothing matches, it says so.</div>', unsafe_allow_html=True)
     cols = st.columns(3)
     for n, ex in enumerate(EXAMPLES):
-        if cols[n % 3].button(ex, key=f"ex{n}", use_container_width=True):
+        if cols[n % 3].button(ex, key=f"ex{n}", width="stretch"):
             st.session_state["qbox"] = ex
-    question = st.text_input("Question", key="qbox", placeholder="Ask about a NASA combustion experiment, material or gravity level")
+    question = st.text_input("Question", key="qbox", placeholder="Ask about a NASA combustion experiment, material or gravity level", max_chars=300)
     if question:
         a = answer(question)
         tag = {"ok": ("safe", "[MATCH]"), "partial": ("cau", "[PARTIAL]"), "no_data": ("cau", "[NO DATA]")}[a["status"]]

@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest==9.2.0
+pypdf  # only for scripts/pdf_to_text.py (data extraction)

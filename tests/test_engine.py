@@ -29,10 +29,15 @@ def test_gravity_margin_matches_source_table():
     assert gm[0.38] == -3.1 and gm[0.16] == -5.75 and gm[0.0] == -4.1
 
 
-def test_silicone_burns_in_1g_not_in_0g():
-    p = paired_comparison()
+def test_paired_verdicts_are_correct():
+    p = paired_comparison().set_index("sample")
+    assert p.loc["2-1", "verdict"] == "Burned in 1g only"      # silicone 0.27 mm
+    assert p.loc["2-2", "verdict"] == "Burned in 1g only"      # silicone 0.61 mm (7.6 cm in 1g)
+    assert p.loc["2-3", "verdict"] == "No spread in either"    # silicone 1.03 mm: neither burned
+    assert p.loc["1-2", "verdict"] == "Burned in 0g only"      # SIBAL opposed flow
+    assert p.loc["2-5", "verdict"] == "Spread in both"
+    assert p.loc["2-8", "verdict"] == "0g: flame anchored; 1g: spread"
     sil = p[p["material"] == "Silicone sheet"]
-    assert (sil["verdict"].str.contains("did NOT spread in 0g") | (sil["outcome_1g"] == "no_spread")).all()
     assert (sil["outcome_0g"] == "no_spread").all()
 
 
