@@ -112,6 +112,7 @@ data/raw/                   PSI metadata dump and extracted source text
 scripts/                    fetch_psi.py, build_investigations.py, build_measurements.py, validate_data.py
 tests/                      data, engine, Q&A, robustness, design and app tests
 docs/submission.md          Text for the Space Apps project page
+docs/slides/                7-slide demo deck (HTML source); PDF and PPTX in docs/, built by scripts/build_slides.py
 ```
 
 ## Data sources

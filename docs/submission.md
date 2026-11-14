@@ -12,9 +12,11 @@ Nasavior
 
 Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data
 
-## Demo link (video, 30 seconds or less, English or English subtitles)
+## Demo link (7-slide deck, English)
 
-`<<public video URL, no login>>`
+https://github.com/muhammedesatdemir/nasavior/blob/main/docs/Nasavior_SpaceApps2026_Slides.pdf
+
+(Public GitHub link; it works once the file is pushed to the `main` branch. Open it in a private window before submitting. Editable copy: `docs/Nasavior_SpaceApps2026_Slides.pptx`.)
 
 ## Final Project link
 
