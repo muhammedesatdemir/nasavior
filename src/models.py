@@ -44,6 +44,7 @@ class Investigation(BaseModel):
     platform: Optional[str] = None
     hardware: Optional[str] = None
     objective: str
+    impact: Optional[str] = None  # PSI 'Research Impacts/Earth Benefits' text, copied
     o2_range_pct: Optional[str] = None
     pressure_range_kpa: Optional[str] = None
     flow_range_cm_s: Optional[str] = None

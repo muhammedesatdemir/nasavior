@@ -21,7 +21,7 @@ environments:
     flow_cm_s: null
     flow_note: "Not specified by sources; set by user."
     basis:
-      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Lunar atmosphere: O2 at or above 30%, pressure at or below 10.2 psi (about 70.3 kPa). UNVERIFIED: taken from the challenge-page review, not yet re-read by us directly."}
+      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Lunar atmosphere: O2 at or above 30%, pressure at or below 10.2 psi (about 70.3 kPa). Confirmed by the team against the challenge brief and the NASA Exploration Atmosphere design reference."}
       - {ref_id: REF-EXPATM, page: "p.2", note: "Exploration atmosphere validation studies have crew living at 8.2 psi (56.5 kPa) and 34% O2."}
     assumption: false
   - id: mars
@@ -43,7 +43,7 @@ environments:
     flow_cm_s: null
     flow_note: "Not specified by sources; set by user."
     basis:
-      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Pressurized rovers are named as a target use case. UNVERIFIED: taken from the challenge-page review, not yet re-read by us directly."}
+      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Pressurized rovers are named as a target use case. Confirmed by the team against the challenge brief and the NASA Exploration Atmosphere design reference."}
       - {ref_id: REF-EXPATM, page: "p.2", note: "Exploration atmosphere 8.2 psi (56.5 kPa) / 34% O2."}
     assumption: true
     assumption_note: "Sources do not define a rover cabin atmosphere. The exploration atmosphere is used as a stand-in; gravity level can be switched to 0.38 g."

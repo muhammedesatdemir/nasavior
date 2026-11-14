@@ -150,6 +150,7 @@ for pid, theme in THEME.items():
         "inv_id": pid, "source": "PSI", "name": clean(s["Title"]), "acronym": clean(s.get("Acronym")) or None,
         "platform": clean(s.get("Flight Platform")) or None, "hardware": parse_hw(s.get("Experiment Hardware")),
         "objective": clean(s.get("Objectives")),
+        "impact": clean(s.get("Research Impacts/Earth Benefits")) or None,
         "o2_range_pct": r.get("o2"), "pressure_range_kpa": None, "flow_range_cm_s": r.get("flow"),
         "ranges_ref": r.get("ref"), "key_findings": FINDINGS.get(pid, []),
         "ref_ids": sorted({ref_id} | {f["ref_id"] for f in FINDINGS.get(pid, [])}),
