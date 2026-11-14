@@ -18,7 +18,8 @@ Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion 
 
 ## Final Project link
 
-`<<GitHub repository URL>>` and live app `<<Streamlit Community Cloud URL>>`
+Repository: https://github.com/muhammedesatdemir/nasavior
+Live app: https://nasavior.streamlit.app
 
 ---
 
@@ -75,7 +76,7 @@ Third-party software: Streamlit, Plotly, pandas, NumPy, pydantic, PyYAML, rank-b
 
 ## Use of SI (AI)
 
-Code was written with the help of an AI coding assistant (Claude Code, Anthropic), including help with architecture proposals, data-extraction scripts and tests. The team set the scope, chose the sources, reviewed the extracted values against the documents and decided what the product may and may not claim. The application contains no generative model at run time: search is BM25 retrieval over the cited dataset, and answers are copied from records. The project uses no AI-generated images, video or NASA branding. `<<Team: confirm this paragraph is accurate before submitting.>>`
+Code was written with the help of an AI coding assistant (Claude Code, Anthropic), including help with architecture proposals, data-extraction scripts and tests. The team set the scope, chose the sources, reviewed the extracted values against the documents and decided what the product may and may not claim. The application contains no generative model at run time: search is BM25 retrieval over the cited dataset, and answers are copied from records. The project uses no AI-generated images, video or NASA branding. 
 
 ## Team
 
@@ -91,13 +92,13 @@ Recording setup: browser at 1920x1080, app zoom 100 %, light screen movement onl
 
 | Time | Screen | Voice-over |
 |---|---|---|
-| 0-5 s | Title card: NASAVIOR, Flame in Freefall, Space Apps 2026 | "Passing a fire test on Earth does not mean a material is safe in space." |
-| 5-12 s | Select ISS in the sidebar, open Flammability tab, limits chart and O2 x flow map appear | "Nasavior puts NASA's microgravity combustion experiments in one cited atlas." |
-| 12-20 s | Highlight the BASS-II card and the silicone row in the 0 g versus 1 g table | "On the ISS, PMMA kept burning at 13.6 percent oxygen. On Earth the limit is 16." |
-| 20-27 s | Select Lunar Base, open Lunar & Mars gap tab, amber zeros in the coverage matrix | "For the Moon and Mars, NASA's data stops at five-second drop tests. Nasavior shows exactly where." |
-| 27-30 s | End card: repository and app URL, team name | "Nasavior. Know what NASA knows." |
+| 0-5 s | Title card over the Overview page: NASAVIOR, Flame in Freefall, Space Apps 2026, team names as on-screen text | "Passing a fire test on Earth does not mean a material is safe in space." |
+| 5-12 s | ISS selected, Overview tab; cursor moves over the SUMMARIZE, RANK and INTERPRET cards | "Nasavior puts NASA's combustion experiments in one cited atlas." |
+| 12-19 s | Flammability tab: limits chart, then scroll to the BASS-II card | "On the ISS, PMMA burned at 13.6 percent oxygen. On Earth the limit is 16." |
+| 19-26 s | Select Lunar Base, open the Lunar & Mars gap tab, amber zeros in the coverage matrix | "For the Moon and Mars, NASA data stops at five-second drop tests." |
+| 26-30 s | End card: repository and app URL | "Next: FM2, NASA's planned Moon fire tests." |
 
-Voice-over word count: 62 words (about 27 seconds at 2.3 words per second, leaving a margin under the 30-second limit). Do not add words.
+Voice-over word count: 58 words (about 25 seconds at 2.3 words per second, leaving a margin under the 30-second limit). Do not add words. Burn English subtitles into the video.
 
 ### Backup if a video is not accepted: 7-slide outline
 

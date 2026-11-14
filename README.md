@@ -6,6 +6,9 @@ Nasavior lets an engineer pick a target environment (ISS, Lunar base, Martian ha
 
 > Passing a fire test on Earth does not mean a material is safe in space.
 
+**Live app:** https://nasavior.streamlit.app  
+**Repository:** https://github.com/muhammedesatdemir/nasavior
+
 Every number on screen is transcribed from a NASA document and shown with its reference and page. Nothing is estimated, interpolated or generated.
 
 ## How it answers the challenge
@@ -51,6 +54,8 @@ The challenge asks for a tool that **summarizes, ranks and interprets** NASA com
 Developed and tested on Python 3.13. Use a currently supported Python version when deploying. The app needs no API key, no network access at run time and no secrets.
 
 ```bash
+git clone https://github.com/muhammedesatdemir/nasavior.git
+cd nasavior
 python -m venv .venv
 .venv\Scripts\activate          # Windows;  source .venv/bin/activate on macOS/Linux
 pip install -r requirements.txt
