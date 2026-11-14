@@ -1,0 +1,1318 @@
+
+=====PAGE 1=====
+1
+1
+Open Atmospheres Forum
+Exploration Atmospheres Validation Study
+5 August 
+2022
+Alejandro Garbino
+MD, PhD, MPH, 
+FAsMA
+
+=====PAGE 2=====
+2
+•
+ DCS is a potential outcome of this testing 
+•
+ Type I DCS is also a potential outcome during flight implementation 
+per NASA STD
+-
+3001:
+≤ 15% Type I DCS @ 95% statistical confidence; No Type II DCS
+≤ 20% VGE (bubbles)
+•
+ Purpose of test series is to ensure 
+acceptably low incidence
+ of Type I DCS, not zero DCS
+Executive Summary
+1 
+Conkin et al. “Venous gas emboli and ambulation at 4.3 psia” 
+Aerosp
+ Med Hum Perform. 2017; 88(4):370
+–
+376.
+•
+ The
+ Exploration Atmosphere Prebreathe Validation Studies 
+will validate prebreathe plans for Artemis to reduce 
+decompression sickness (DCS) risk to acceptable levels* 
+–
+ Lunar EVA (walking) is significantly more provocative for DCS than microgravity EVA (floating) 
+[1]
+–
+ Shuttle & ISS protocols are therefore applicable to microgravity only 
+–
+ Apollo had 100% O2 cabin and zero EVA prebreathe; unacceptable flammability risk for Artemis
+–
+ Artemis habitat and suit atmospheric parameters have not been finalized
+•
+ 20’ Hypobaric Chamber in B7 at JSC has been outfitted to support multi
+-
+day human testing
+•
+ Initial 
+prebreathe
+ validation studies have crew living at 8.2 psi, 34% O
+2
+, 66% N
+2 
+(aka “Exploration Atmosphere”)
+•
+ During simulated EVAs, chamber operates at 4.3 psi with subjects on O
+2
+ masks
+–
+ No pressurized suits will be used during the simulated EVAs
+•
+ Funded by EVA Program; multiple participating organizations
+•
+ A 3
+-
+day hypobaric chamber evaluation with 6 subjects and 2 in
+-
+chamber technicians took place in May 2022
+•
+ An 11
+-
+day hypobaric chamber test with 6 subjects and 2 in
+-
+chamber technicians took place in June 2022
+
+=====PAGE 3=====
+3
+Decompression Sickness (DCS)
+•
+ Decreasing ambient pressure causes release of nitrogen 
+dissolved in tissues, which may result in DCS
+–
+ Grade IV VGE: 
+Venous Gas Emboli “Silent bubbles” (no symptoms or 
+clinical findings) can be detected by Doppler; Grade IV is the most 
+severe form, and is correlated with risk of DCS
+–
+ Type I DCS: 
+Joint pain; single extremity tingling or numbness; mild 
+skin symptoms
+–
+ Type II DCS: 
+Central neurological or cardiopulmonary symptoms; can 
+be life
+-
+threatening
+•
+ Pre
+-
+EVA 
+denitrogenation
+ via oxygen prebreathe 
+reduces
+DCS risk during EVA
+Flight prebreathe protocols must be validated via human 
+ground testing prior to operational implementation
+
+=====PAGE 4=====
+4
+Why Exploration Atmosphere?
+•
+ Significantly increased frequency of EVAs is expected during planetary 
+ops vs. ISS
+–
+ Up to 24 
+hrs
+ / person / week
+•
+ DCS risk is increased by ambulation and physical activity vs microgravity
+[1]
+Apollo had 100% O2
+cabin and zero EVA 
+prebreathe
+Current ISS prebreathe protocols would add significant timeline 
+overhead and are NOT validated for planetary EVA
+–
+ Shuttle & ISS protocols are applicable to microgravity only
+1
+Conkin J, et al. Venous gas emboli and ambulation at 4.3 
+psia
+. 
+Aerosp
+ Med Hum Perform. 2017; 88(4):370
+–
+376.
+
+=====PAGE 5=====
+5
+Timeline Implications
+2
+ Abercromby et al. 
+ “Suited Ground Vacuum Chamber Testing Decompression Sickness Tiger Team Report”, 
+2018 NASA Technical Report
+3
+ Abercromby, et al. 
+“Using the Shuttle Staged Prebreathe Atmosphere and Variable Pressure Spacesuits for Exploration Extravehicular Activity”
+, 2018 
+AsMA
+. 
+4
+ Abercromby et al. 
+“Modeling Oxygen Prebreathe Protocols for Exploration EVA Using Variable Pressure Suits”, 
+2017 
+AsMA
+. 
+Exploration conops are incompatible with multi
+-
+hour prebreathe durations
+• Timelines are notional and for purposes of comparison only
+• All prebreathe durations are model-based estimates [2-4]
+• Detailed depress profiles being worked with CX3
+
+
+=====PAGE 6=====
+6
+Rationale for Exploration Atmosphere
+Saturation 
+Atmosphere
+Microgravity 
+Prebreathe* (h:mm)
+Planetary 
+Prebreathe*
+14.7 psi, 21% O2 4:00 (resting) 6:30-7:00 2
+10.2 psi, 26.5% O2 0:40 3:00-3:30 3
+8.2 psi, 34% O2 0:00-0:15 0:00-0:30 4,5
+5.0 psi, 100% O2 
+(Apollo, Gemini) 0:00 0:00
+2
+ Abercromby et al. 
+Suited Ground Vacuum Chamber Testing Decompression Sickness Tiger Team Report, (
+2019
+) NASA Technical Report
+. NASA/TP
+-
+2019
+–
+220343 
+3
+ Abercromby et al. 
+Using the Shuttle Staged Prebreathe Atmosphere and Variable Pressure Spacesuits for Exploration Extravehicular Activity
+, (
+2018
+) AsMA. 
+4
+ Abercromby et al. 
+Modeling Oxygen Prebreathe Protocols for Exploration EVA Using Variable Pressure Suits, (
+2017
+) AsMA. 
+5
+ Abercromby et al
+. 
+Modeling a 
+15
+-
+min extravehicular activity prebreathe protocol using NASA
+ ׳
+s exploration atmosphere (
+56.5 
+kPa/
+34
+% O
+2
+)
+.
+ Acta 
+Astronautica,
+ 109 
+(
+2015
+), pp.
+76
+-
+87
+.
+Unvalidated estimates 
+(i.e., not yet available for flight use)
+*Assumes 6hr EVA @ 4.3 psia and 
+approximately equal DCS risk level
+
+
+=====PAGE 7=====
+7
+Research Goals
+Primary Research Goal
+1.
+ Prebreathe
+ Validation (H3PO)
+Secondary Research Goals
+2.
+ Response/Recovery from Mild Exercise (H3PO)
+3.
+ Visual Acuity and Contrast (H3PO)
+4.
+ Acute Mountain Sickness Symptoms (H3PO)
+5.
+ Performance during EVA Simulations (H3PO)
+6.
+ Physiological Reponses of Hypobaric 
+Hyperoxic
+ Environment (Cardiovascular and Vision Lab)
+7.
+ Hematology/Immunology/Inflammatory Response (Immunology Lab)
+8.
+ Oxidative Damage (Nutritional Biochemistry Lab)
+9.
+ Appetite and Food Intake Impacts (Space Food Systems Lab)
+10.
+ Sleep Quality and Duration Impacts (Behavioral Health and Performance Lab)
+11.
+ Neurocognitive and Functional Responses (Behavioral Health and Performance Lab)
+12.
+ Habitability Acceptability (HFEL/CDSA)
+
+=====PAGE 8=====
+8
+Exploration Atmosphere Validation
+• Accept Criteria (per NASA-STD-3001):
+•  15% incidence of Type I DCS (@95% CL)
+•  20% incidence of Grade IV VGE (@95% CL)
+• No Type II DCS
+• Reject Criteria
+• > 15% incidence of Type I DCS (@70% CL)
+• > 20% incidence of Grade IV VGE (@70% CL)
+• Any Type II DCS
+• Neither
+• Requires review and additional data
+Test Series 1 
+(11 days)
+Test Series 
+2 (11 days)
+DSMB Review;
+Modify 
+Prebreathe
+Neither 
+Accept 
+nor Reject
+Reject
+Reject
+Accept
+Neither 
+Accept nor 
+Reject
+Additional Test 
+Series
+Reject
+Validated Prebreathe 
+Protocol
+DSMB: Data Safety Monitoring Board
+•
+ We can accept the protocol 
+with:
+•
+ no
+ DCS in 19 exposures
+•
+ 1 DCS in 30 exposures 
+
+=====PAGE 9=====
+9
+Expected Results
+•
+ DCS is a potential outcome of this 
+testing
+–
+ 24/7 medical coverage, and dual 
+coverage w/ docs in
+-
+person during EVAs
+–
+ Portable hyperbaric (treatment) 
+chamber will be located inside B7 to 
+enable immediate DCS treatment if 
+required
+–
+ Protocol is IRB approved
+–
+ External Data Safety Monitoring Board 
+providing additional oversight
+•
+ Approach is based on (and consistent 
+with) Shuttle & ISS prebreathe protocol 
+validation testing
+Test Series 1 
+(11 days)
+Test Series 
+2 (11 days)
+DSMB Review;
+Modify 
+Prebreathe
+Neither 
+Accept 
+nor Reject
+Reject
+Reject
+Neither 
+Accept nor 
+Reject
+Additional Test 
+Series
+Reject
+Validated Prebreathe 
+Protocol
+Test Series 1 
+(11 days)
+Test Series 
+2 (11 days)
+DSMB Review;
+Modify 
+Prebreathe
+Neither 
+Accept 
+nor Reject
+Reject
+Reject
+Accept
+
+=====PAGE 10=====
+10
+Prebreathe Validation Approach
+•
+ What prebreathe is sufficient to meet NASA
+-
+STD
+-
+3001 standards in a Lunar/Mars 
+environment?
+–
+ Equilibrate to Exploration Atmosphere: 
+ 8.2psi/34% 
+O
+2 
+for 48 
+hrs
+–
+ Minimum prebreathe duration:
+ 20 min ≥ 6.2psi
+–
+ Simulated EVA:
+ 4.3psi/85% O
+2
+–
+ Simulate EVA workload:
+ 6 tasks for 6hrs across workload ranges
+                    
+   
+   
+   
+  
+   
+  
+           
+          
+   
+   
+   
+               
+            
+                
+        
+        
+            
+           
+                
+               
+               
+                             
+                    
+        
+                
+
+=====PAGE 11=====
+11
+EVA Simulation
+
+
+=====PAGE 12=====
+12
+Characterize Adaption to Exploration Atmosphere
+•
+ Hypoxic stress:
+–
+ PiO
+2
+ = 128mmHg
+•
+ Equivalent Air Altitude: 4000ft
+–
+ PCO
+2
+ < 3mmHg
+•
+ Early look at potential Artemis concerns:
+–
+ Materials/Flammability mitigation
+–
+ Food system
+–
+ Procedures
+
+
+=====PAGE 13=====
+13
+OUTCOMES
+
+=====PAGE 14=====
+14
+11
+-
+day Study Chamber Pressure
+•
+ Average Habitat pressure: 8.15psi (target 8.2psia +/
+-
+ 0.1)
+–
+ Time outside limits: 0
+-
+103 min/day (goal ≤2 
+hrs
+/day)
+•
+ Longest excursion: 15min
+Within Goals
+
+=====PAGE 15=====
+15
+11
+-
+day Study Chamber Pressure 
+–
+ EVA Sims
+•
+ Average EVA pressure: 4.27psi (target 4.3psia +/
+-
+ 0.1)
+–
+ Time outside limits: 0
+-
+20min/EVA (goal ≤2 min/EVA)
+•
+ Longest excursion 16min
+ Within Goals
+
+=====PAGE 16=====
+16
+11
+-
+day Study Chamber Oxygen
+•
+ Average Chamber O2: 33.96% (target 34% +/
+-
+1%)
+–
+ 10
+th
+-
+90
+th
+ percentile: 33.78
+-
+34.17%
+–
+ Allowed excursion: 30min/day (chamber average)
+•
+ Longest excursion: 26 min
+•
+ Oxigraf
+ calibration still being characterized
+–
+ Single
+ gas grab sample 30.25%  (Gas Lab)
+–
+ If chamber was 
+actually
+ at 8.15psi, 30.25% FiO2:
+–
+ EAA: 4000 ft 
+-
+> 6500 ft
+–
+ P(DCS): 2.7% 
+-
+> 3.9% per exposure
+Even if O
+2
+ levels were lower than 
+intended, results are still applicable to 
+Exploration Atmosphere; flight 
+atmosphere would be more protective
+Forward work:
+EC4
+-
+EHP FY23 ITA being developed to 
+understand & resolve O2 measurement/
+monitoring methods
+
+=====PAGE 17=====
+17
+Was the prebreathe within parameters?
+*Transition from 6.2 psi to 5.4 psi (supersateration point) added ~80-90 sec 
+   
+   
+   
+  
+   
+  
+           
+          
+               
+            
+           
+    
+    
+    
+    
+               
+         
+    
+Prebreathe Times:
+EVA1: 20min 14 sec
+EVA2: 20min 21 sec
+EVA3: 20min 01 sec
+EVA4: 20min 04 sec
+EVA5: 20min 10 sec
+
+=====PAGE 18=====
+18
+EVA Summary: 
+Preliminary 
+DCS Data
+DCS Incidence rate during 11
+-
+day study:
+•
+ EVA 1
+: 6 subjects participated, 1 DCS case
+•
+ EVA 2
+: 4 subjects participated, no DCS*
+•
+ 1 subject sat out EVA per protocol on ground level oxygen due to DCS on EVA1
+•
+ 1 subject sat out EVA due to mask fit issues
+•
+ EVA 3
+: 5 subjects participated, no DCS
+•
+ 1 subject sat out EVA due to mask fit issues
+•
+ EVA 4
+: 5 subjects participated, no DCS 
+•
+ 1 subject sat out EVA due to musculoskeletal issues 
+•
+ EVA 5
+: 6 subjects participated, 1 DCS case
+•
+ 1 subject excluded due to musculoskeletal issues 
+Summary: 2 DCS cases out of 25 total simulated EVAs during the 11-
+day study (8% DCS)
+* DCS case in Doppler Technician – not a study subject
+
+=====PAGE 19=====
+19
+EVA Summary: Preliminary DCS Data
+
+
+=====PAGE 20=====
+20
+EVA Summary:
+Preliminary Venous Gas Emboli Data
+Venous Gas Emboli (VGE) ≥ 
+G
+rade
+ IV incidence rate during 11
+-
+day study:
+•
+ EVA 1
+: 6 subjects participated, 0 VGE IV
+•
+ EVA 2
+: 4 subjects participated, 0 VGE IV
+•
+ EVA 3
+: 5 subjects participated, 0 VGE IV
+•
+ EVA 4
+: 5 subjects participated, 0 VGE IV
+•
+ EVA 5
+: 5 subjects participated
+, 0 VGE 
+IV
+Grade IV VGE: Venous Gas Emboli “Silent bubbles” (no 
+symptoms or clinical findings) can be detected by Doppler; 
+Grade IV is the most severe form, and is correlated with 
+risk of DCS
+
+
+=====PAGE 21=====
+21
+Conclusion
+•
+ Successfully carried out 11
+-
+day test
+–
+ Chamber pressure parameters within goal
+–
+ Chamber oxygen parameter within control band, but reviewing sensor calibration
+–
+ Prebreathe duration within seconds of target duration
+–
+ No DCS Type II
+–
+ Two DCS Type I cases; symptoms fully resolved
+–
+ Excellent cross
+-
+organization teamwork and integration of test support teams
+•
+ Lessons Learned
+–
+ 1
+-
+day and 3
+-
+day tests extremely valuable for test team, subjects, and protocol verification
+–
+ Several subjects with mask fit problems
+–
+ Sleep timing and accommodations borderline 
+–
+ implemented schedule fixes, but forward 
+work on bunks
+–
+ Various habitability tweaks to implement on future runs (hygiene system, 
+etc
+)
+–
+ Importance of backup subjects/critical test team members realized due to COVID surge
+
+=====PAGE 22=====
+22
+Next Steps
+•
+ Finalize post
+-
+11
+-
+day test:
+–
+ Resolve O2 sensor issues
+–
+ Review pressure control mechanism
+•
+ Possible to adjust control logic to oscillate 8.15
+-
+8.25psi instead of 8.10
+-
+8.20?
+•
+ Consider tweaking low bias on 4.3psi set point
+–
+ Maintain proficiency of all test personnel
+•
+ Consider short test to review sensors and maintain proficiency
+–
+ Complete data analysis for secondary measures
+•
+ Will we need further ‘hypoxia characterization’ testing?
+•
+ Provide study debrief and ‘data quick look’ at multiple forums (‘roadshow’)
+•
+ Determine objectives and schedule for next chamber tests
+–
+ Aiming for ~two 11
+-
+day chamber tests per year
+•
+ Establish and kick
+-
+off ‘Open Atmospheres’ research forum to cross
+-
+pollinate 
+across DCS research groups
+
+=====PAGE 23=====
+23
+Thank you!
+
+=====PAGE 24=====
+24
+Thank you!
+LINK to 
+WALKAROUND 
+VIDEO
+
+=====PAGE 25=====
+25
+BACKUP SLIDES
+
+=====PAGE 26=====
+26
+VGE grading
+•
+ VGE IV audio clip
+•
+ ?E
+-
+B grades videos?
+
+=====PAGE 27=====
+27
+Protocol: EVA Simulations
+•
+ Odd Days:  EVA Simulations (N
+EVA
+ = 5)
+–
+ Subjects don masks and breathe 85% O
+2
+during 15 min depress to 4.3 
+psia
+.
+•
+ DTs 
+prebreathe
+ 100% O
+2
+ for 30min prior 
+to depress
+–
+ Complete 6 
+hrs
+ of prescribed simulated 
+EVA activities
+–
+ Rest + noninvasive Doppler bubble 
+monitoring every 15 min during the EVA 
+simulation
+–
+ 15
+-
+min repressurization to return all 
+subjects and DTs back to 8.2 
+psia
+Day 1 3hr PB @ 100% O2, 14.7 psia; Depress to 8.2 psia, equilibrate
+Day 2 Equilibrate + Hypoxia Characterization
+Day 3 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 4 Hypoxia Characterization
+Day 5 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 6 Hypoxia Characterization
+Day 7 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 8 Hypoxia Characterization
+Day 9 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 10 Hypoxia Characterization
+Day 11 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 1 3hr PB @ 100% O2, 14.7 psia; Depress to 8.2 psia, equilibrate
+Day 2 Equilibrate + Hypoxia Characterization
+Day 3 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 4
+Day 5 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 6
+Day 7 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 8
+Day 9 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 10
+Day 11 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+
+=====PAGE 28=====
+28
+Protocol: Hypoxia Characterization
+•
+ Even Days:
+Rest + Hypoxia Characterization
+–
+ Various 
+physiologic and cognitive 
+measurements will be taken to characterize 
+the effects of hypobaric hypoxia in the 
+exploration atmosphere. 
+Day 1 3hr PB @ 100% O2, 14.7 psia; Depress to 8.2 psia, equilibrate
+Day 2 Equilibrate + Hypoxia Characterization
+Day 3 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 4 Hypoxia Characterization
+Day 5 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 6 Hypoxia Characterization
+Day 7 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 8 Hypoxia Characterization
+Day 9 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 10 Hypoxia Characterization
+Day 11 Prebreathe; 6hr EVA @ 4.3 psia, 85% O2
+Day 1 3hr PB @ 100% O2, 14.7 psia; Depress to 8.2 psia, equilibrate
+Day 2 Equilibrate + Hypoxia Characterization
+Day 3
+Day 4 Hypoxia Characterization
+Day 5
+Day 6 Hypoxia Characterization
+Day 7
+Day 8 Hypoxia Characterization
+Day 9
+Day 10 Hypoxia Characterization
+Day 11
+
+=====PAGE 29=====
+29
+Requirements
+
+
+=====PAGE 30=====
+30
+EVA Simulation 
+–
+ Rationale for Tasks
+•
+ 61 exploration EVA tasks
+[2]
+ were decomposed into 126 subtasks then characterized by functional 
+requirements of each subtask
+•
+ Categories:
+–
+ Body Positioning:   
+Seated, Kneeling, Standing, Mobile, etc. 
+–
+ Muscle Groups:   
+Whole/Both, Upper, Lower
+–
+ Ambulation:   
+None, Walking, Walking (terrain), Walking (slopes), Crawling, Climbing
+–
+ Loading Bearing:   
+None, Carrying, Pushing/Pulling, Attached to Suit
+–
+ Loads:   
+None, Minimal (<5 
+lbs
+), Variable, Heavy (>30 
+lbs
+)
+–
+ Upper Body Reach (Workspace):   
+None, Standard, Extended
+–
+ Hand Usage:   
+None, Fine Motor Skills, Grip Strength, Vibration, Shock, Other/Combination
+–
+ Task Occurrence:   
+Rare (<10% of EVAs), Some (~30%), Many (~50%), Most (~75%), Nearly All (>90%)
+–
+ Task Duration (expected)
+–
+ Task Frequency:   
+1
+-
+2 times per EVA, Every 2 hours during EVA, Every hour during EVA, 1
+-
+30 minutes during EVA
+2
+Coan D. Exploration EVA System Concept of Operations. NASA TR, EVA
+-
+EXP
+-
+0042 
+RevB
+. 2020
+24%
+17%52%
+7%
+Upper body
+Lower body
+Both Upper and Lower body
+Minimal work
+
+=====PAGE 31=====
+31
+EVA Simulation 
+–
+ Final Task Circuit
+3Astrand I. Degree of strain during building work as related to individual aerobic work capacity. Ergonomics. 1967;10(3):293-303.
+4Jørgensen K. Permissible loads based on energy expenditure measurements. Ergonomics. 1985;28(1):365-9.
+5Epstein Y, Rosenblum J, Burstein R, Sawka MN. External load can alter the energy cost of prolonged exercise. Eur J Appl Physiol Occup Physiol. 1988;57(2):243-7.
+6Webb J, Krock L, Gernhardt M. Oxygen consumption at altitude as a risk factor for altitude decompression sickness. 2010; 81(11): 987-992. 
+•
+ Navigate, ascend/descend, and traverse terrain
+–
+ Step
+-
+ups (low and high)
+: lower/full body task, no powered 
+equipment required, can alter workload with step size and 
+cadence
+•
+ Retrieve, transport, and stow equipment/tools
+–
+ Weight transfer: 
+mobile whole
+-
+body task
+•
+ Collect samples, conduct repairs, or install connectors
+–
+ Kneeling task board: 
+stationary task, mild cognitive 
+engagement
+–
+ Standing task board: 
+stationary task, mild cognitive 
+engagement
+•
+ Deploy/operate experimental package
+–
+ Arm ergometer: 
+stationary upper body task, can 
+standardize workload with rpm and resistance
+•
+ Target: Maintain an average of 30
+-
+40% VO
+2
+max
+[3
+-
+5]
+–
+ High
+-
+step included a fast 2
+-
+min period (70%), as high 
+levels of activity have been shown to highly correlate with 
+DCS risk
+[6]
+Task ConOps Workload Rx
+1
+High Steps Ambulation on Uneven 
+Terrain
+Step Height at 12 inch
+Cadence to target 50-
+70% VO2peak
+2
+Standing Task Board Maintenance R&R and 
+Procedures
+---
+3
+Weight Transfer Transport Equipment/Tools Number of transfers 
+(15 or 25lb weights)
+DOP Doppler / Rest Rest ---
+4
+Low Steps Ambulation on Flat Terrain Step Height at 6-inch 
+Cadence to target 50% 
+VO2peak
+5
+Arm Ergometer Deploy Experiments and 
+Use Sampling Tools
+Resistance at 30W
+Cadence to target 
+30%VO2peak
+6
+Kneeling Task Board Kneeling, Fine Motor, 
+Upper Body
+---
+DOP Doppler / Rest Rest ---
+
+=====PAGE 32=====
+32
+Pilot Data 
+-
+ Results
+•
+ The average %VO
+2
+peak across all tasks was ~38% (1274 BTU/
+hr
+). 
+Avg = 38%
+
+=====PAGE 33=====
+33
+
+
+=====PAGE 34=====
+34
+Test Summaries
+•
+ Testing history:
+–
+ Nov 2021: Overnight test @ 14.7 psi / 21% O2 (n=8)
+–
+ Feb 2022: 1
+-
+day test @ 8.2 psi / 4.3psi O2 (n=2)
+–
+ May2022: 3
+-
+day test @ 8.2 psi / 34% O2 (n=8)
+–
+ June 2022: 11
+-
+day test @ 8.2 psi / 34% O2 (n=8)
+•
+ Future Goal:
+–
+ Multiple 11
+-
+day tests/year and 3
+-
+day ‘training’ runs
+
+
+=====PAGE 35=====
+35
+Study Acceptability Survey
+•
+ EVA Simulation (e.g. 
+prebreathe
+, mask fit, exercises, 
+discomfort)
+•
+ Chamber (e.g. comms, noise, transfer ops, etc.)
+•
+ Sleep (e.g. timing, interruptions, noise, lighting, comfort, 
+temperature)
+•
+ Clothing (e.g. comfort, fit, hygiene)
+•
+ Waste management system and hygiene (e.g. toilets, 
+personal care items, etc.)
+•
+ Food (e.g. quantity, type, quality) 
+•
+ Science block (
+e.g
+ duration, level of effort, timing 
+functionality)
+
+
+=====PAGE 36=====
+36
+Acceptability
+•
+ Acceptability questionnaire:
+–
+ No subjects withdrew
+–
+ Added additional sleep in last 3 days of study (timeline change)
+•
+ EVA Simulation (e.g. Prebreathe, mask fit, exercises, discomfort)
+–
+ 9: mask fit
+•
+ Chamber (e.g. Comms, Noise, transfer ops, etc.)
+–
+ 6: toilet transfer ops without ‘bucket’
+•
+ Sleep (e.g. timing, interruptions, noise, lighting, comfort, temperature)
+–
+ 9: Mattress
+•
+ Clothing (e.g. comfort, fit, hygiene)
+–
+ 6: PBI clothing fit
+•
+ WMS and Hygiene (e.g. toilets, personal care items, etc.)
+–
+ 7: Transfers, use of urine jugs (additional in study)
+•
+ Food (e.g. quantity, type, quality) 
+–
+ 6: Hard to keep weight on with cold food, would like snacks during day
+•
+ Science block (
+e.g
+ duration, level of effort, timing functionality)
+–
+ 6: Blood draws/early morning timing
+
+
+=====PAGE 37=====
+37
+Lessons Learned
+•
+ Overall were able to conduct both a 3
+-
+day and 11
+-
+day test successfully
+–
+ Significant concern from management on provoking DCS
+–
+ Mitigated, but not totally resolved by 11
+-
+day study
+•
+ 3
+-
+day test was 
+critical
+ from both a team readiness and subject training 
+perspective
+–
+ Unanimous recommendation by subjects to do such a test 
+–
+ even at 14.7psi
+•
+ Single science block/procedures training much preferred
+–
+ Vs single/ ‘1
+-
+off’ trainings by each ‘department’
+–
+ Integrates well with a 3
+-
+day (or even 1.5 day)
+–
+ Less ‘pre/post’ data collections, or add more days to ‘study’ (not just chamber days)
+•
+ Sleep:
+–
+ Biggest concern in both of timing (acceptably ‘fixed’) and comfort (still far from ‘fixed’)
+•
+ Limit individual duty hours for support/science team
+
+=====PAGE 38=====
+38
+3 DAY TEST
+
+=====PAGE 39=====
+39
+Prebreathe Validation Approach
+•
+ What prebreathe is sufficient to meet NASA
+-
+STD
+-
+3001 standards in a Lunar/Mars 
+environment?
+–
+ Equilibrate to Exploration Atmosphere: 
+ 8.2psi/34% 
+O
+2 
+for 48 
+hrs
+–
+ Minimum prebreathe duration:
+ 20 min ≥ 6.2psi
+–
+ Simulated EVA:
+ 4.3psi/85% O
+2
+–
+ Simulate EVA workload:
+ 6 tasks for 6hrs across workload ranges
+   
+   
+   
+  
+   
+  
+           
+          
+   
+   
+   
+               
+            
+                
+        
+        
+            
+           
+                
+               
+               
+                             
+                    
+        
+                
+    
+
+=====PAGE 40=====
+40
+Preliminary
+ EVA Summary : DCS
+•
+ 3 day:
+–
+ Meets study criteria?
+–
+ 6 exposures, 0 DCS
+•
+ 11 day:
+–
+ EVA1: 6 exposures, 1 DCS
+–
+ EVA2: 4 exposures, 0 DCS (1 GLO, 1 mask fit) 
+•
+ (*1 DCS in DT)
+–
+ EVA3: 5 exposures, 0 DCS (1 mask fit) (DT in GLO)
+–
+ EVA4: 5 exposures, 0 DCS (1 MSK)
+–
+ EVA5: 5 exposures, _ DCS
+•
+ 11 + 3 day:
+–
+ EVA0  0/6
+–
+ EVA1  1/12
+–
+ EVA2  1/16
+–
+ EVA3  1/21
+–
+ EVA4  1/26
+–
+ EVA5 _/31  
+•
+ 11
+-
+day
+–
+ EVA1  1/6
+–
+ EVA2  1/10
+–
+ EVA3  1/15
+–
+ EVA4  1/20
+–
+ EVA5 _/25 
+
+
+=====PAGE 41=====
+41
+EVA Summary (Preliminary DCS)
+
+
+=====PAGE 42=====
+42
+EVA Summary (Preliminary VGE)
+•
+ 3 day:
+–
+ Meets study criteria?
+–
+ 6 exposures, _ VGE IV
+•
+ 11 day:
+–
+ EVA1: 6 exposures, _ VGE IV
+–
+ EVA2: 5 exposures, _ VGE IV
+–
+ EVA3: 5 exposures, _ VGE IV
+–
+ EVA4: 5 exposures, _ VGE IV
+–
+ EVA5: _ exposures, _ VGE IV

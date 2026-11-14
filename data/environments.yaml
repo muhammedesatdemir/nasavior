@@ -1,0 +1,59 @@
+# Environment presets. Every value has a basis. "assumption: true" means the source does not
+# specify the value for that environment; Nasavior picks it to make the UI usable and says so in the UI.
+# Pressure in kPa (1 psi = 6.894757 kPa). O2 in mole %. Flow in cm/s (null = user-set).
+environments:
+  - id: iss
+    label: "ISS (microgravity)"
+    g_level: 0.0
+    pressure_kpa: 101.3
+    o2_pct: 21.0
+    flow_cm_s: null
+    flow_note: "Analysis of ISS Node 1 rack-bay average air velocity: 5.19-11.86 m/min (about 8.7-19.8 cm/s) depending on which fans run. Saffire tests used 20 cm/s."
+    basis:
+      - {ref_id: REF-OLSON2012, page: "p.1", note: "ISS operates at sea-level air, 21% O2, 14.7 psia (brief pre-EVA excursions to 30% O2 at 10.2 psia)."}
+      - {ref_id: REF-ISSFLOW, page: "p.4", note: "Rack-bay average air velocity values."}
+    assumption: false
+  - id: lunar
+    label: "Lunar habitat (0.16 g)"
+    g_level: 0.16
+    pressure_kpa: 70.3
+    o2_pct: 30.0
+    flow_cm_s: null
+    flow_note: "Not specified by sources; set by user."
+    basis:
+      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Lunar atmosphere: O2 at or above 30%, pressure at or below 10.2 psi (about 70.3 kPa). UNVERIFIED: taken from the challenge-page review, not yet re-read by us directly."}
+      - {ref_id: REF-EXPATM, page: "p.2", note: "Exploration atmosphere validation studies have crew living at 8.2 psi (56.5 kPa) and 34% O2."}
+    assumption: false
+  - id: mars
+    label: "Mars habitat (0.38 g)"
+    g_level: 0.38
+    pressure_kpa: 56.5
+    o2_pct: 34.0
+    flow_cm_s: null
+    flow_note: "Not specified by sources; set by user."
+    basis:
+      - {ref_id: REF-EXPATM, page: "p.2", note: "Exploration atmosphere 8.2 psi (56.5 kPa) / 34% O2."}
+    assumption: true
+    assumption_note: "Sources do not define a Mars habitat atmosphere. The exploration atmosphere is used as a stand-in."
+  - id: rover
+    label: "Pressurized rover (0.16 g)"
+    g_level: 0.16
+    pressure_kpa: 56.5
+    o2_pct: 34.0
+    flow_cm_s: null
+    flow_note: "Not specified by sources; set by user."
+    basis:
+      - {ref_id: REF-CHALLENGE2026, page: "Challenge text", note: "Pressurized rovers are named as a target use case. UNVERIFIED: taken from the challenge-page review, not yet re-read by us directly."}
+      - {ref_id: REF-EXPATM, page: "p.2", note: "Exploration atmosphere 8.2 psi (56.5 kPa) / 34% O2."}
+    assumption: true
+    assumption_note: "Sources do not define a rover cabin atmosphere. The exploration atmosphere is used as a stand-in; gravity level can be switched to 0.38 g."
+  - id: earth
+    label: "Earth (1 g)"
+    g_level: 1.0
+    pressure_kpa: 101.3
+    o2_pct: 21.0
+    flow_cm_s: null
+    flow_note: "Natural (buoyant) convection."
+    basis:
+      - {ref_id: REF-OLSON2012, page: "p.1", note: "Sea-level air, 21% O2, 14.7 psia."}
+    assumption: false

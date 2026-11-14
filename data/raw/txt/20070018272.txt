@@ -1,0 +1,1821 @@
+
+=====PAGE 1=====
+ 1
+Draft 
+International Space Station Temperature and Humidity Control 
+Subsystem Verification for Node 1 
+David E. Williams 
+NASA, Johnson Space Center 
+Copyright © 2007 SAE International
+ABSTRACT 
+    The International Space Station (ISS) Node 1 
+Environmental Control and Life Support (ECLS) System 
+is comprised of five subs ystems: Atmosphere Control 
+and Supply (ACS), Atmosphere Revitalization (AR), Fire 
+Detection and Suppression (FDS), Temperature and 
+Humidity Control (THC), and Water Recovery and 
+Management (WRM).  This paper provides a summary 
+of the nominal operation of the Node 1 THC subsystem 
+design.  The paper will also provide a discussion of the 
+detailed Element Verification methodologies for nominal 
+operation of the Node 1 THC subsystem operations 
+utilized during the Qualification phase. 
+ 
+INTRODUCTION 
+ 
+    Node 1 flew to ISS on Flight 2A.  It was the first 
+module of the United States On-Orbit Segment (USOS) 
+that was launched to ISS.  The Node 1 ISS ECLS design 
+featured limited ECLS capability.  The main purpose of 
+Node 1 was to provide internal storage by providing four 
+stowage rack locations within the module and to allow 
+docking of multiple modules and a truss segment to it. 
+    Of the five Node 1 EC LS subsystems this paper will 
+only address the nominal operation of the THC 
+subsystem.  The nominal operation of the Node 1 THC 
+subsystem capability can be subdivided into their sub-
+allocated functions.  The Node 1 THC consists of: 1) 
+intramodule ventilation, 2) particulate and microbe 
+removal and disposal, and 3) intermodule ventilation 
+(IMV) with adjacent element s including cooling of Node 
+1, the Cupola, and/or the Mini-Pressurized Logistic 
+Module (MPLM) [the name for the MPLM was changed 
+from Mini-Pressurized Logistic Module to Multi-Purpose 
+Logistic Module later in the Program] with cold IMV air 
+from the United States (U.S.) Laboratory Module. 
+    The Verification of the ISS hardware is accomplished 
+using a building block process.  Verification starts at the 
+Component Level and progresses until the Element 
+Level Verification is complete.  The primary objective of 
+the Qualification Verification program is to ensure that 
+the subsystems meet the section three requirements in 
+the Prime Item Development Specifications (PIDS).  The 
+PIDS dictates whether a section three requirement is  
+ 
+ 
+verified by test, analys is, inspection, and/or 
+demonstration, as documented in section four of the 
+PIDS.   
+    Node 1 is a Protoflight Test Article since no Element 
+Qualification Test Article exists.  Therefore, no additional 
+ground testing or evaluations can be performed on Node 
+1 after it has been installed into the Space Shuttle 
+Payload Bay and launched to ISS.  Node 1 is shown in 
+Figure 1 during processing at Kennedy Space Center 
+(KSC) and in flight during the F light 2A series of Flights 
+(i.e., Flights 2A, 2A.1, 2A.2a, and 2A.2b). 
+ 
+SUBSYSTEM OVERVIEWS 
+ 
+    A general overview of the nominal operation of the 
+Node 1 THC subsystem is provided below. 
+ 
+THC: 
+ 
+    The Node 1 THC hardware, as shown in Figure 2, 
+consists of an Inlet Orbita l Replacement Unit (ORU); 
+four cabin air bacteria filter/housing assemblies; a 
+plenum that holds the four  bacteria filter/housing 
+assemblies, two linear diffusers; four cabin air diffusers; 
+nine IMV isolation valves; three IMV fans each with a set 
+of mufflers; one Node 1  air temperature control 
+rheostat; two variable air volume damper assemblies 
+(VAVDAs); three IMV inlet screens; four manual THC 
+isolation valves, flexible air ducting, and hard air ducting 
+made from a composite material. 
+    The Node 1 intramodule ventilation is predominately 
+provided by the Inlet ORU blow ing air out of the radial 
+port area linear diffusers and the starboard rack bay 
+area diffusers.  It is also supplemented by the aft IMV 
+fan blowing air out of the port rack bay area diffusers 
+when the Russian Segment (RS) IMV air is not being 
+transported to the U.S. Labor atory Module, and by the 
+starboard IMV fan blowing air out of the radial port area 
+linear diffusers after delivery of the Joint Airlock to ISS 
+and when no extravehicular activities (EVA’s) are being 
+performed out of the Joint Airlock.         
+    The particulate and microbial control in Node 1 is 
+provided by the four Node 1 bacteria filters that are
+
+=====PAGE 2=====
+ 
+ 
+ 2
+ 
+                                                                                            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                              
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                 Node 1 Inlet ORU, Cabin Diffuser,                                          Node 1 IMV Fan and Mufflers 
+                      and the Node 1 VAVDA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                     Node 1 Linear Diffusers 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                  Node 1 and PMA 1 at KSC                                 Node 1 attached to the early RS during Flight 2A 
+ 
+ 
+Figure 1 – Node 1 during processing at KSC 
+and In Flight during the Flight 2A Series of Flights 
+ 
+ 
+
+=====PAGE 3=====
+                   
+To Cupola 
+A 
+P 
+S 
+A F A F 
+A F 
+P 
+S 
+P Z 
+N S 
+A 
+F 
+N1Z
+Stowage 1 
+PMA - 1 
+N1N
+Stowage 2 
+N1S
+Stowage 4 
+N1P
+Stowage 3 
+Lab
+Zenith Truss Cupola
+Airlock Node 3 
+Midbay 
+F
+ 
+Figure 2 – Node 1 Temperature and Humidity Control Schematic 
+ 
+ 
+installed in the four bacteria filter housings which are 
+contained in the Node 1 plenum.  The bacteria filter was 
+designed to remove 99.9% of all particulates 0.3 microns 
+and larger.  The airflow through the four bacteria filters is 
+provided by the Inlet ORU.  The four bacteria filters are 
+prefiltered from large airborne debris by the return air 
+grill at the top of the plenum and from smaller sized 
+airborne debris by the screen on top of the bacteria filter 
+housing.  The crew cleans these two areas once a week 
+as part of their nominal house cleaning task. 
+    The purpose of the Node 1 IMV is to provide air 
+exchange between Node 1 and t he adjacent elements.  
+It allows for centralized atmosphere revitalization and 
+oxygen partial pressure control.  The IMV in Node 1 is 
+flexible to support the assembly operation by opening or 
+closing the manual THC isolation valves and by enabling 
+or disabling the IMV flow from an attached element by 
+opening or closing the IMV valves at the Node 1 
+interfaces. The Node 1 IMV design has two 
+configurations to minimize the partial pressure of carbon 
+dioxide (ppCO2) in the U.S. Laboratory Module.  One is 
+to direct the RS IMV air from the Node 1 aft port IMV 
+interface to the Node 1 forward port IMV interface.  The 
+other is to direct Node 3 IMV air from the Node 1 nadir 
+forward interface to the Node 1 forward port interface.  
+The IMV also has a secondary function of providing 
+temperature and humidity control in Node 1; the MPLM 
+when docked to Node 1 during assembly; and the 
+Cupola (if it is attached to Node 1) by transferring cold 
+air from the U.S. Laboratory Module Common Cabin Air 
+Assembly (CCAA) to those elements.  Temperature 
+control in those elements is controlled by opening up or 
+closing down the two VAVDA’s in Node 1.  This is 
+accomplished by adjusting the appropriate rheostat in 
+Node 1 or the Cupola.  The rheostats are designed to 
+transmit a signal to the Node 1 Multiplexer/Demultiplexer 
+(MDM) based on their position.  The software in the 
+MDM then interprets the r heostat position into a VAVDA 
+position and then transmits a valve position command to 
+the appropriate VAVDA, as required. 
+ 
+ELEMENT LEVEL VERIFICATION PROGRAM 
+ 
+NODE 1 THC QUALIFICATION METHODOLOGY: 
+ 
+Circulate Intramodule: 
+ 
+Requirement Verification 
+Node 1 shall provide an 
+effective atmosphere 
+velocity in its cabin 
+aisleway in the range of 
+15 to 40 feet per minute in 
+response to the input  
+voltage at the PMA-1 
+interface as specified in 
+SSP 50144-03 and SSP 
+42122, paragraph 
+3.2.1.5.4.1. 
+ 
+During periods when 
+intermodule atmosphere 
+exchange with the Airlock 
+is nonfunctional, effective 
+velocity shall be 10-40 
+feet per minute. 
+The Node 1 capability to maintain an 
+effective cabin aisleway circulation 
+velocities in the range of 15-40 feet per 
+minute (10-40 feet per minute during 
+periods when intermodule atmosphere 
+exchange with the Airlock is non 
+functional) shall be verified by analysis.  
+An analysis shall be performed 
+considering the Node 1 internal 
+geometric configuration with proper 
+locations of diffusers and registers, and 
+the effect of the intermodule ventilation 
+velocities.  The verification shall be 
+considered successful when the analysis 
+proves that the specified velocity ranges 
+are met. 
+ 
+The requirement references two ISS Interface Control 
+Documents (ICDs).  The relevant requirement from one 
+of those documents is listed below.  The data from SSP 
+50144-03 is not relevant to close this requirement. 
+ 
+SSP 42122  From/To PMA-1  
+ 3
+
+=====PAGE 4=====
+ 4
+Interface Parameters and Node 1 
+Node 1 ECLS Signals The Node 1 shall provide to and receive 
+from PMA-1 instrumentation signals for 
+the monitoring and control of the 
+following ECLSS equipment by the N1-1 
+MDM: Atmosphere Revitalization valves, 
+Smoke Detector, Node 1 Air Mixing 
+Valve, Cabin Fan, Node 1 Aft IMV Fan, 
+Node 1 Aft IMV Return and Supply 
+Valves, Node 1 Starboard Return and 
+Supply valves, Node 1 Port Supply valve, 
+Node 1 Rheostat.  The interface between 
+the Node 1 ECLSS equipment and the 
+N1-1 MDM shall be in compliance with 
+SSP 30261:002. 
+ 
+The Node 1 shall provide and receive 
+from PMA-1 instrumentation signals for 
+the monitoring and control of the 
+following ECLSS equipment by the N1-2 
+MDM: Cabin Pressure sensor, Smoke 
+Detector, Cupola Air Mixing Valve, Node 
+1 Port and Starboard IMV Fans, Node 1 
+Nadir IMV Return and Supply valves, 
+Node 1 Forward Return and Supply 
+valves, Cupola Rheostat.  The interface 
+between the Node 1 ECLSS equipment 
+and the N1-2 MDM shall be in 
+compliance with SSP 30261:002. 
+ 
+ 
+    Boeing – Huntington Beach analyzed the air 
+circulation velocities for the two different areas in Node 
+1, i.e. the rack bay area in cluding the aft hatch area and 
+the radial port area that incl udes the four radial hatch 
+areas and the forward hatch area, using equations from 
+the Carrier Air Conditioning manual and the American 
+Society of Heating, Refrigerating and Air Conditioning 
+Engineers (ASHRAE) handbook to show compliance for 
+this requirement assuming a clean crew cabin closeout.   
+    For the rack bay area they analyzed three different 
+possible configurations.  The three different 
+configurations included: 1) the Inlet ORU providing 5.10 
+cubic meter/min [180 cubic feet  per minute (cfm)] to the 
+two starboard aft diffusers and the Node 1 aft port IMV 
+fan providing 3.96 cubic meter/min [140 cfm] to the port 
+aft diffusers; 2) the Inlet ORU providing 5.10 cubic 
+meter/min [180 cfm]  to the two starboard aft diffusers 
+and the Node 1 aft port IMV fan providing 0 cubic 
+meter/min [0 cfm] to the port aft diffusers; and 3) the Inlet 
+ORU providing 0 cubic meter/min [0 cfm] to the two 
+starboard aft diffusers and the Node 1 aft port IMV fan 
+providing 3.96 cubic meter/min [140 cfm] to the port aft 
+diffusers. 
+    For the radial port area they analyzed two possible 
+different configurations.  The two configurations included 
+1) the Inlet ORU providing 3.40 cubic meter/min [120 
+cfm] to the linear diffusers and 2) the Node 1 starboard 
+aft IMV fan providing 0 or 3.96 cubic meter/min [0 or 140 
+cfm] to the linear diffusers. 
+ 
+Results: 
+ 
+    Based on the analysis the rack bay area has an 
+average air velocity of 6.67 meter/min [21.88 feet per  
+ 
+minute (fpm)] with only the Inlet ORU providing air flow 
+to  
+that region; 11.86 meter/min [38.90 fpm] with the Inlet 
+ORU and aft port IMV fan providing air flow to that 
+region; and 5.19 meter/min [17.02 fpm] if only the aft port 
+IMV fan was providing air flow to that region.  Boeing – 
+Huntington Beach also did a review of the impact of the 
+Node 1 aft port IMV fan provided its integrated specified 
+minimum flow rate of 3.82 cubic meter/min [135 cfm] 
+instead of 3.96 cubic meter/min [140 cfm].  The result of 
+this review showed that the air velocity would drop from 
+11.86 meter/min [38.90 fpm] to 11.58 meter/min [38 fpm] 
+when the Inlet ORU and aft port IMV fan are providing 
+air flow to that region. 
+    For the radial port area the average air flow is 8.19 
+meter/min [26.86 fpm] with the Inlet ORU and the 
+starboard aft IMV fan providing air flow to the radial port 
+area and 3.78 meter/min [12.40 fpm] when only the Inlet 
+ORU is providing air flow to the radial port area. 
+    The analysis results are reasonable when compared 
+to the results from a Space Station Freedom (SSF) 
+cabin ventilation development test with similar cabin 
+geometry, diffuser placement, and air flow rates from the 
+diffusers.  Also, the qualification data from the Inlet ORU 
+showed that 8.49 cubic meter/min (300 cfm) is feasible 
+with the variable speed fan that is contained in the Inlet 
+ORU. 
+    To show compliance with the input voltage interface 
+requirement Boeing – Huntington Beach summarized 
+the power and data connection data for the Inlet ORU 
+and the starboard aft IMV fan based on the Node 1 
+electrical and data drawings. 
+  Based on these results, Node 1 met the air circulation 
+requirements. 
+ 
+Remove Particulates: 
+ 
+Requirement Verification 
+Node 1 shall limit the daily 
+average atmosphere 
+particulate level of the 
+Node 1 to less than 0.05 
+mg per cubic meter 
+(100,000 particles per 
+cubic foot) with peak 
+concentrations less than 
+1.0 milligrams per cubic 
+meter (2 million 
+particulates per cubic 
+foot) for particles ranging 
+from 0.5 microns to 100 
+microns, based on a 
+particle generation rate of 
+1.4 million particles per 
+minute.  Whenever Node 
+1 is required to remove 
+gaseous contaminants 
+from the atmosphere, it is 
+not required to 
+simultaneously remove 
+airborne particulate 
+contaminants. 
+The Node 1 capability to remove 
+atmosphere airborne particulate 
+contaminants shall be verified by 
+analysis.  An analysis shall be done to 
+verify that the Node 1 circulation design 
+is capable of removing atmosphere 
+particulates in the range of 0.5-100 
+microns and it is able to maintain a daily 
+average of 100,000 particles per cubic 
+foot with peak concentrations less than 
+1.0 milligrams per cubic meter (2 million 
+particulates per cubic foot) based upon 
+generation rate of 1.4 million particles per 
+minute. 
+ 
+The verification shall be considered 
+successful when the analysis results 
+verify that the number of filters installed in 
+the Node 1 can meet the particulate 
+requirement as specified. 
+ 
+ 
+
+=====PAGE 5=====
+ 5
+    Boeing – Huntington Beach analyzed the particulate 
+removal rate based on the Inlet ORU provided 8.49 
+cubic  
+ 
+ 
+meter/min [300 cfm] of air fl ow through the four bacteria 
+filters, a specified bacteria filter removal efficiency of 
+99.9%, five IMV interfaces at Assembly Complete (AC) 
+that met their particulate requirements, a Node 1 cabin 
+volume of 51.4 cubic meter [1814.4 cubic feet], and a 
+particulate generation rate as specified. 
+ 
+Results: 
+ 
+   Based on the analysis Node 1 would reach a steady 
+state level of 2,022 particles/cubic meter [71,421 
+particles/cubic foot] if all of  the adjacent elements were 
+at their maximum daily average particulate level and 
+Node 1 would reach a steady state of 39,689 
+particles/cubic meter [1,401,821 particles/cubic foot] if all 
+of the adjacent elements were  at their peak particulate 
+level. 
+    Based on these results Node 1 met its particulate 
+removal requirement.  Even if the Inlet ORU flow through 
+the bacteria filter was reduced due to the maximum cold 
+IMV flow from the U.S. Laboratory it still would meet its 
+requirements. 
+ 
+Remove Microbes: 
+ 
+Requirement Verification 
+Node 1 shall limit the daily 
+average airborne 
+microbes in the Node 1 
+atmosphere to no less 
+than 1000 colony forming 
+units per cubic meter.  
+Whenever Node 1 is 
+required to remove 
+gaseous contaminants 
+from the atmosphere, it is 
+not required to 
+simultaneously remove 
+airborne microbes. 
+The Node 1 capability to remove airborne 
+microbes from cabin atmosphere shall be 
+verified by the analysis performed in 
+4.3.2.1.39. 
+ 
+ 
+    Boeing – Huntington Beach analyzed the microbe 
+removal rate based on the Inlet ORU provided 8.49 
+cubic meter/min [300 cfm] of  air flow through the four 
+bacteria filters, a microbe removal efficiency of 99.9% 
+based on discussion with the filter element supplier, five 
+IMV interfaces at AC that met their microbe 
+requirements, a Node 1 cabin volume of 51.4 cubic 
+meter [1814.4 cubic feet], and a microbe generation rate 
+of 1643 colony forming units (CFU) per crew member 
+based on data from the bacteria filter manufacture. 
+ 
+Results: 
+ 
+   Based on the analysis Node 1 would reach a steady 
+state level of 758 CFU/cubic meter [26,772 CFU/cubic 
+feet] for one crew member in Node 1, 816 CFU/cubic 
+meter [28,821 CFU/cubic feet] for two crew members in 
+Node 1, 874 CFU/cubic mete r [30,870 CFU/cubic feet] 
+for three crew members in Node 1, 932 CFU/cubic meter 
+[32,981 CFU/cubic feet] for four crew members in Node 
+1, and 990 CFU/cubic meter [ 34,967 CFU/cubic feet] for 
+five crew members in Node 1 if all of the adjacent  
+ 
+elements met their microbe requirements.  It is assumed 
+that post delivery of the U.S. Laboratory Module that no 
+more than two crew members will be in Node 1 for any 
+length of time so even if the Inlet ORU flow through the 
+bacteria filter was reduced due to the maximum cold 
+IMV flow from the U.S. Laboratory it still would meet its 
+requirements. 
+    Based on these results, Node 1 met its microbe 
+removal requirement.  
+ 
+Dispose of Particulates: 
+ 
+Requirement Verification 
+Particulate contaminant 
+removal as specified in 
+3.2.1.39 shall incorporate 
+replaceable filters with 
+replacement intervals 
+greater than or equal to 
+90 days. 
+The Node 1 capability to dispose of the 
+removed particulate contaminants shall 
+be verified by analysis.  An analysis of 
+the Node 1 drawings shall be performed 
+to evaluate filters installations for 
+compliance with SSP 50005 for crew 
+interface requirements for ease of 
+replacement.  The analysis shall verify 
+the operability of hinges, knobs, and 
+brackets as appropriate for crew to 
+remove and replace the filters.  The 
+analysis of 4.3.2.1.39 shall be executed 
+through the end of the 90 day interval 
+and evacuated for mass accumulation in 
+the filter.  The verification shall be 
+considered successful when analysis of 
+drawings shows that replaceable filters 
+are in full compliance with SSP 50005, 
+section 13.2.3.1 requirements for removal 
+and disposal by crew, and the analysis 
+shows that at the end of the 90 day 
+period, daily average particle densities 
+remain below 100,000 particles per cubic 
+foot, and instantaneous densities below 2 
+million particles per cubic foot for 
+particles ranging from 0.5 to 100 microns. 
+ 
+Dispose of Microbes: 
+ 
+Requirement Verification 
+Airborne microbe removal 
+as specified in 3.2.1.41 
+shall incorporate 
+replaceable filters with 
+replacement intervals 
+greater than or equal to 
+90 days. 
+The Node 1capability to dispose of 
+airborne microbes from cabin 
+atmosphere shall be verified by the 
+analysis performed in 4.3.2.1.40. 
+ 
+ 
+    Boeing – Huntington Beach analyzed the life of the 
+filters to make sure that t hey could last at least 90 days 
+based on the specified filter end of life requirement of 
+filtering 32 grams of airborne debris without dropping the 
+filter delta pressure from < 8.4 mm-H2O (0.33 in-H2O) to 
+< 0.5 in-H2O (12.7 mm-H2O).  The analysis used the 
+average particulate level in Node 1 of 0.05 mg/cubic 
+meter (100,000 particles/cubic feet) to calculate an 
+average density of particles, t he filter qualification data 
+removal efficiency of 99.97%, the inlet ORU providing 
+
+=====PAGE 6=====
+ 6
+8.49 cubic meter/min (300 cfm)  through the filters, the 
+results from the steady stat e particulate level of 2,022 
+particles/cubic meter [71,421 particles/cubic foot] in 
+Node 1 if all of the adjacent elements were at their  
+ 
+maximum daily average particulate level, and the fact 
+that there are four filters in Node 1.  They also analyzed 
+what would happen to the filter life if all of the adjacent 
+elements were at their peak particulate levels and the 
+Node 1 steady state level wa s at 39,689 particles/cubic 
+meter [1,401,821 particles/cubic foot]. 
+    The access and removal of the filter per SSP 50005 
+will not be addressed in this paper.  It was addressed 
+during the requirement closure process for Node 1 as 
+part of the Flight Crew Sy stem and Integration (FCS&I) 
+requirements and not by the ECLS team. 
+ 
+Results: 
+ 
+    Based on the analysis the filters will last 293 days if 
+the adjacent elements were at their maximum daily 
+average particulate levels and 14.9 days if the adjacent 
+elements were at their peak particulate levels to collect 
+32 grams of material.  It is assumed that the peak level 
+in the adjacent elements is only a short term transient 
+condition so the filters should easily last > 90 days. 
+    This analysis is conservative since the filter 
+qualification showed that it would take 250 grams of 
+material to have a delta pressure of 12.2 mm-H2O (0.48 
+in-H2O) versus the specified value of 32 grams of 
+material with a pressure loss of < 12.7 mm-H2O (0.5 in-
+H2O).  Therefore the ECLS part of the disposal 
+requirements was met. 
+ 
+Circulate Intermodule: 
+ 
+Requirement Verification 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+exchange intermodule 
+atmosphere with the USL 
+at the flow rates specified 
+in SSP 41141, 
+paragraphs 3.2.1.2.6.1.4 
+and 3.2.1.2.5.1.4. 
+ 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+exchange intermodule 
+atmosphere with the Node 
+3 at flow rates specified in 
+SSP 41140, paragraphs 
+3.2.1.2.6.1.4 and 
+3.2.1.2.5.1.4. 
+ 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+The circulate atmosphere intermodule 
+Node 1/USL requirement shall be verified 
+by analysis.  Analysis of the Node 1 
+ducts, valves, fans, etc. involved in the 
+performance of the Node 1/USL 
+intermodule atmosphere exchange shall 
+be performed to determine the dynamic 
+flow capability between the internal 
+ambient atmosphere and the USL 
+interface junctions.  Analysis of the 
+interface signals specified in SSP 50144-
+03 and SSP 42122, paragraph 
+3.2.1.5.4.1 and their connections to the 
+Node 1 devices shall be performed to 
+determine the combinations of interface 
+signals that cause activation of those 
+devices providing for circulation of Node 
+1 ambient atmosphere to the USL 
+interface junction, and the combinations 
+that will provide for circulation of ambient 
+atmosphere from the USL interface 
+junction to the Node 1 internal 
+atmosphere.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere to and from the USL 
+interface junctions can provide the flow 
+rates specified in SSP 41141, paragraph 
+3.2.1.2.6.1.4 and 3.2.1.2.5.1.4; and (2) 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+receive intermodule 
+atmosphere from the 
+Airlock, at flow rates as  
+the valves, fans, etc, necessary for the 
+activation of the flows to and from the 
+USL interface junctions can be activated 
+by the defined combinations of the 
+interface signals  
+ 
+Requirement 
+(cont’d) 
+Verification 
+(cont’d) 
+specified in SSP 41145, 
+paragraph 3.2.1.3.5.  
+ 
+Note: Intermodule 
+atmosphere flow to the 
+Airlock will be through the 
+open hatch. 
+ 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+provide intermodule 
+atmosphere to the Cupola 
+at flow rates as specified 
+in SSP 41142, paragraph 
+3.2.1.2.3.1.5. 
+ 
+Note: Return atmosphere 
+from the Cupola will be 
+through the open hatch. 
+ 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+receive intermodule 
+atmosphere from the 
+PMA-1 at flow rates as 
+specified in SSP 42122, 
+paragraph 3.2.1.3.1.1.3. 
+ 
+When directed from the 
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph 
+3.2.1.5.4.1, Node 1 shall 
+exchange intermodule 
+atmosphere with the 
+MPLM at flow rates as 
+specified in SSP 42007, 
+paragraph 3.2.1.3.3.1.3 
+and 3.2.1.3.4.1.2. 
+ 
+Note: Return atmosphere 
+from the MPLM will be 
+through the open hatch. 
+ 
+The Node 1 shall 
+accommodate the transfer 
+of a minimum of 140 cubic 
+feet per minute of 
+parasitic air from the USL 
+to the MPLM without 
+dropping the pressure 
+more than 1.04 inches of 
+water, including the 
+jumper duct in the MPLM 
+vestibule, excluding the 
+jumper duct in the USL 
+vestibule. 
+ 
+When directed from the 
+specified by SSP 50144-03 and SSP 
+42122, paragraph 3.2.1.5.4.1. 
+ 
+The circulate atmosphere intermodule 
+Node 1/Node 3 requirement shall be 
+verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in the 
+performance of the Node 1/Node 3 
+intermodule atmosphere exchange shall 
+be performed to determine the dynamic 
+flow capability between the internal 
+ambient atmosphere and the Node 3 
+interface junctions.  Analysis of the 
+interface signals specified in SSP 50144-
+03 and SSP 42122, paragraph 
+3.2.1.5.4.1 and their connections to the 
+Node 1 devices shall be performed to 
+determine the combinations of interface 
+signals that cause activation of those 
+devices providing for circulation of Node 
+1 ambient atmosphere to the Node 3 
+interface junction, and the combinations 
+that provide for circulation of ambient 
+atmosphere from the Node 3 interface 
+junction to the Node 1 internal 
+atmosphere.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere to and from the 
+Node 3 interface junctions can provide 
+the flow rates specified in SSP 41140, 
+paragraph 3.2.1.2.6.1.4 and 3.2.1.2.5.1.4; 
+and (2) the valves, fans, etc, necessary 
+for the activation of the flows to and from 
+the Node 3 interface junctions can be 
+activated by the defined combinations of 
+the interface signals specified by SSP 
+50144-03 and SSP 42122, paragraph 
+3.2.1.5.4.1. 
+ 
+The circulate atmosphere intermodule 
+Node 1/Airlock requirement shall be 
+verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in 
+drawing atmosphere from the Airlock 
+interface to the Node 1 ambient 
+atmosphere shall be performed to 
+determine the dynamic flow capability 
+between the internal ambient atmosphere 
+and the Airlock interface junction.  
+Analysis of the interface signals specified 
+in SSP 50144-03 and SSP 42122, 
+paragraph 3.2.1.5.4.1 and their 
+connections to the Node 1 devices shall 
+be performed to determine the 
+combinations of interface signals that 
+cause activation of those devices 
+providing for circulation of Node 1 
+ambient atmosphere to the Airlock 
+interface junction.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere from the Airlock 
+interface junction can provide the flow 
+rates specified in SSP 41145, paragraph 
+3.2.1.2.6.1.3; and (2) the valves, fans, 
+
+=====PAGE 7=====
+ 7
+PMA-1 MDM control 
+signals as specified by 
+SSP 50144-03, and SSP 
+42122, paragraph  
+etc, necessary for the activation of the 
+flows from the Airlock interface junction 
+can be activated by the defined 
+combinations of the interface signals  
+ 
+Requirement 
+(cont’d) 
+Verification 
+(cont’d) 
+3.2.1.5.4.1, Node 1 shall 
+receive Intermodule 
+atmosphere from the 
+PMA-3 at flow rates as 
+specified in SSP 42097, 
+paragraph D3.2.1.3.1.1.3 
+and D3.2.1.3.2.1.3. 
+ 
+Note: Intermodule 
+atmosphere flow to the 
+PMA-3 will be through the 
+open hatch. 
+ 
+Node 1 shall provide for 
+manual adjustment of  
+intermodule atmosphere 
+flow rate from the USL by 
+resident crewmembers, 
+and conversion of the 
+adjustment selection to a 
+proportional voltage 
+applied to the PMA-1 
+interface as specified by 
+SSP 42122, paragraph 
+3.2.1.5.4.1, for the 
+purpose of temperature 
+control of the Node 1 
+atmosphere. 
+specified by SSP 50144-03 and SSP 
+42122, paragraph 3.2.1.5.4.1. 
+ 
+The circulate atmosphere intermodule 
+Node 1/Cupola requirement shall be 
+verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in 
+providing Nod 1 ambient atmosphere to 
+the Cupola interface shall be performed 
+to determine the dynamic flow capability 
+between the internal ambient atmosphere 
+and the Cupola interface junction.  
+Analysis of the interface signals specified 
+in SSP 50144-03 and SSP 42122, 
+paragraph 3.2.1.5.4.1 and their 
+connections to the Node 1 devices shall 
+be performed to determine the 
+combinations of interface signals that 
+cause activation of those devices 
+providing for circulation of Node 1 
+ambient atmosphere to the Cupola 
+interface junction.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere to the Cupola 
+interface junction can provide the flow 
+rates specified in SSP 41142, paragraph 
+3.2.1.2.3.1.5; and (2) the valves, fans, 
+etc, necessary for the activation of the 
+flows to the Cupola interface junction can 
+be activated by the defined combinations 
+of the interface signals specified by SSP 
+50144-03 and SSP 42122, paragraph 
+3.2.1.5.4.1. 
+ 
+The circulate atmosphere intermodule 
+Node 1/PMA-1 requirement shall be 
+verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in 
+performance of the Node 1/PMA-1 
+intermodule atmosphere exchange shall 
+be performed to determine the dynamic 
+flow capability between the internal 
+ambient atmosphere and the PMA-1 
+interface junction.  Analysis of the 
+interface signals specified in SSP 50144-
+03 and SSP 42122, paragraph 
+3.2.1.5.4.1 and their connections to the 
+Node 1 devices shall be performed to 
+determine the combinations of interface 
+signals that cause activation of those 
+devices providing for circulation of Node 
+1 ambient atmosphere to the PMA-1 
+interface junction to the Node 1 internal 
+atmosphere.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere from the PMA-1 
+interface junction can provide the flow 
+rates specified in SSP 42122, paragraph 
+3.2.1.3.1.1.3 and 3.2.1.3.2.1.3; and (2) 
+the valves, fans, etc, necessary for the 
+activation of the flows from the PMA-1 
+interface junctions can be activated by 
+the defined combinations of the interface 
+signals specified by SSP 50144-03 and 
+SSP 42122, paragraph 3.2.1.5.4.1. 
+ 
+The circulate atmosphere intermodule 
+Node 1/MPLM requirement shall be  
+ 
+Requirement 
+(cont’d) 
+Verification 
+(cont’d) 
+ verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in the 
+performance of the Node 1/MPLM 
+intermodule atmosphere exchange shall 
+be performed to determine the dynamic 
+flow capability between the USL junction 
+and the MPLM interface junction.  
+Analysis of the interface signals specified 
+in SSP 50144-03 and SSP 42122, 
+paragraph 3.2.1.5.4.1 and their 
+connections to the Node 1 devices shall 
+be performed to determine the 
+combinations of interface signals that 
+cause activation of those devices 
+providing for circulation of Node 1 
+ambient atmosphere to the MPLM 
+interface.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow to the 
+MPLM interface junction can provide the 
+flow rates specified in SSP 42007, 
+paragraphs 3.2.1.3.3.1.3 and 
+3.2.1.3.4.1.2; (2) the valves, fans, etc, 
+necessary for the activation of the flows 
+to and from the MPLM interface junctions 
+can be activated by the defined 
+combinations of the interface signals 
+specified by SSP 50144-03 and SSP 
+42122, paragraph 3.2.1.5.4.1; and (3) the 
+valves, fans, etc. accommodate the 
+transfer of a minimum of 140 CFM of 
+parasitic air from the USL to the MPLM 
+without dropping the pressure more than 
+1.04 inches of water, including the jumper 
+duct in the MPLM vestibule but excluding 
+the jumper duct in the USL vestibule. 
+ 
+The circulate atmosphere intermodule 
+Node 1/PMA-3 requirement shall be 
+verified by analysis.  Analysis of the Node 
+1 ducts, valves, fans, etc. involved in the 
+performance of the Node 1/PMA-3 
+intermodule atmosphere exchange shall 
+be performed to determine the dynamic 
+flow capability between the internal 
+ambient atmosphere and the PMA-3 
+interface junction.  Analysis of the 
+interface signals specified in SSP 50144-
+03 and SSP 42122, paragraph 
+3.2.1.5.4.1 and their connections to the 
+Node 1 devices shall be performed to 
+determine the combinations of interface 
+signals that cause activation of those 
+devices providing for circulation of Node 
+1 ambient atmosphere from the PMA-3 
+interface junction.  Verification shall be 
+considered successful when (1) analysis 
+shows that the Node 1 ducts, valves, 
+fans, etc. that are in-line to the flow of 
+ambient atmosphere from the PMA-3 
+interface junction can provide the flow 
+rates specified in SSP 42097, paragraphs 
+D3.2.1.3.1.1.3 and D3.2.1.3.2.1.3; and 
+(2) the valves, fans, etc, necessary for 
+the activation of the flow from the PMA-3 
+interface junction can be activated by the 
+defined combinations of the interface 
+signals specified by SSP 50144-03 and 
+SSP 42122, paragraph 3.2.1.5.4.1. 
+
+=====PAGE 8=====
+ 8
+ 
+Requirement 
+(cont’d) 
+Verification 
+(cont’d) 
+  
+The Node 1 adjustment of intermodule 
+atmosphere flow rate requirement shall 
+be verified by analysis.  Analysis of the 
+Node 1 electrical drawings shall be 
+performed to determine the device 
+providing crew desired flow adjustments, 
+its specifications, and its electrical 
+terminal interfaces.  Analysis of the 
+device specifications and the Node 1 
+installation shall be performed to 
+determine the relationship between the 
+manual setting of the device and the 
+voltage presented to the PMA-1 interface.  
+Verification shall be considered 
+successful when the integrated analysis 
+shows that there is a device for manually 
+adjusting the intermodule ventilation flow 
+rate and the voltage presented to the 
+PMA-1 interface specified in SSP 42122, 
+paragraph 3.2.1.5.4.1, is proportional to 
+the position selected by the crew. 
+ 
+The requirement references nine ISS Interface Control 
+Documents (ICDs).  The re levant requirements from 
+eight of those documents ar e listed below.  The data 
+from SSP 50144-03 is not relevant to close this 
+requirement. 
+ 
+SSP 42122  
+Interface Parameters 
+From/To PMA-1  
+and Node 1 
+Node 1 ECLS Signals The Node 1 shall provide to and receive 
+from PMA-1 instrumentation signals for 
+the monitoring and control of the 
+following ECLSS equipment by the N1-1 
+MDM: Atmosphere Revitalization valves, 
+Smoke Detector, Node 1 Air Mixing 
+Valve, Cabin Fan, Node 1 Aft IMV Fan, 
+Node 1 Aft IMV Return and Supply 
+Valves, Node 1 Starboard Return and 
+Supply valves, Node 1 Port Supply valve, 
+Node 1 Rheostat.  The interface between 
+the Node 1 ECLSS equipment and the 
+N1-1 MDM shall be in compliance with 
+SSP 30261:002. 
+ 
+The Node 1 shall provide and receive 
+from PMA-1 instrumentation signals for 
+the monitoring and control of the 
+following ECLSS equipment by the N1-2 
+MDM: Cabin Pressure sensor, Smoke 
+Detector, Cupola Air Mixing Valve, Node 
+1 Port and Starboard IMV Fans, Node 1 
+Nadir IMV Return and Supply valves, 
+Node 1 Forward Return and Supply 
+valves, Cupola Rheostat.  The interface 
+between the Node 1 ECLSS equipment 
+and the N1-2 MDM shall be in 
+compliance with SSP 30261:002. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SSP 41140 
+Interface 
+Parameters 
+From Node 3 to  
+Node 1 
+To Node 3 from 
+Node 1 
+Flow Rate 120 cfm (3.40 cubic 
+meter/min) 
+> 120 cfm (> 3.40 
+cubic meter/min) 
+Temperature 65 - 85ºF (18.3 – 
+29.4ºC) 
+65 - 85ºF (18.3 – 
+29.4ºC) 
+Pressure Drop < 0.29 in-H2O (< 7.4 
+mm-H2O) 
+< 0.47 in-H2O (< 
+11.9 mm-H2O) 
+ 
+SSP 41141 
+Interface 
+Parameters 
+From U.S. 
+Laboratory 
+Module to  
+Node 1 
+To U.S. 
+Laboratory 
+Module from 
+Node 1 
+Flow Rate > 140 cfm (> 3.96 
+cubic meter/min) 
+> 125 cfm (> 3.54 
+cubic meter/min) pre-
+AC and 120 cfm 
+(3.40 cubic 
+meter/min) at AC 
+Temperature 45 - 85ºF (7.2 – 
+29.4ºC) 
+65 – 85ºF (18.3 – 
+29.4ºC) 
+Dew Point in XPOP 
+Flight Attitude 
+40 – 53ºF (4.4 – 
+11.7ºC) 
+40 – 53ºF (4.4 – 
+11.7ºC) 
+Dew Point 40 - 60ºF (4.4 – 
+15.6ºC) 
+40 - 60ºF (4.4 – 
+15.6ºC) 
+Pressure Loss < 0.5 in-H2O (< 12.7 
+mm-H2O) 
+< 0.35 in-H2O (< 8.9 
+mm-H2O) pre-AC 
+and < 0.29 in-H20 (< 
+7.4 mm-H2O) at AC 
+ 
+SSP 41142 
+Interface 
+Parameters 
+From Cupola to  
+Node 1 
+To Cupola from 
+Node 1 
+Flow Rate N/A > 130 cfm (> 3.68 
+cubic meter/min) 
+Temperature N/A 45 - 85ºF (7.2 – 
+29.4ºC) 
+Head Pressure N/A > 0.17 in-H2O at 130 
+cfm (> 4.3 mm-H2O 
+at 3.68 cubic 
+meter/min) 
+ 
+SSP 41145 
+Interface 
+Parameters 
+From Joint 
+Airlock to  
+Node 1 
+To Joint Airlock 
+from Node 1 
+Flow Rate > 115 cfm (> 3.26 
+cubic meter/min) 
+> 115 cfm (> 3.26 
+cubic meter/min) 
+Temperature 65 – 80ºF (18.3 – 
+26.7ºC) 
+65 – 85ºF (18.3 – 
+29.4ºC) 
+Dew Point in XPOP 
+Flight Attitude 
+40 – 53ºF (4.4 – 
+11.7ºC) 
+40 – 53ºF (4.4 – 
+11.7ºC) 
+Suction Pressure > .45 in-H2O (> 11.4 
+mm-H2O) 
+N/A 
+ 
+SSP 42007 
+Interface 
+Parameters 
+From MPLM to  
+Node 1 
+To MPLM from 
+Node 1 
+Flow Rate 135 – 210 cfm (3.82 
+– 5.95 cubic meter/ 
+min) 
+135 – 210 cfm (3.82 
+– 5.95 cubic meter/ 
+min) 
+Temperature N/A 45 - 85ºF (7.2 – 
+29.4ºC) 
+Dew Point N/A 40 - 60ºF (4.4 – 
+15.6ºC) 
+Heat Load < 650 W N/A 
+Delta Pressure 
+including IMV 
+Jumper 
+N/A < 0.9 in-H2O (< 22.9 
+mm-H2O) at > 135 
+cfm (3.82 cubic 
+meter/min) 
+ 
+
+=====PAGE 9=====
+ 9
+SSP 42097  
+Appendix D 
+Interface 
+Parameters 
+From PMA-3 to  
+Node 1 
+To PMA-3 from 
+Node 1 
+Flow Rate > 120 cfm (> 3.40 
+cubic meter/min) 
+N/A 
+Temperature 65 - 85ºF (18.3 – 
+29.4ºC) 
+65 - 85ºF (18.3 – 
+29.4ºC) 
+Suction Pressure > 1.2 in-H2O at 120 
+cfm (> 30.5 mm- 
+H2O at 3.40 cubic 
+meter/ min) 
+N/A 
+ 
+SSP 42122 
+Interface 
+Parameters 
+From PMA-1 to  
+Node 1 
+To PMA-1 from 
+Node 1 
+Flow Rate 127 – 148 cfm (3.60 
+– 4.19 cubic 
+meter/min) 
+127 – 148 cfm (3.60 
+– 4.19 cubic 
+meter/min) 
+Dew Point 40 - 57ºF (4.4 – 
+13.9ºC) 
+40 - 60ºF (4.4 – 
+15.6ºC) 
+Suction Pressure > 0.13 in-H2O at 135 
+cfm (> 3.3 mm-H2O 
+at 3.82 cubic meter/ 
+min) 
+N/A 
+ 
+ 
+    Boeing – Huntington Beach analyzed the IMV 
+pressure loss, suction pressure, or head pressure at 
+each of the five Node 1 IMV interfaces during assembly 
+and at AC.  The analysis is based on the results from the 
+Boeing – Huntington Beach flow balance development 
+test with a 10% margin added to the pressure loss for 
+the ducting and manual THC isolation valves in Node 1 
+for manufacturing variance between the Boeing – 
+Huntington Beach provided test hardware and the 
+Boeing – Huntington Beach provided flight hardware.  
+The analysis also used the specified IMV valve pressure 
+loss, the specified IMV fan performance data, vendor 
+provided Inlet ORU performance data, Boeing – 
+Huntsville estimated pressure loss for the IMV muffler 
+plus 15% margin, Boeing – Huntsville estimated 
+pressure loss for the IMV jumper plus 20% margin, 
+development test results for the pressure loss versus 
+flow rate for the charcoal filters that were installed in 
+Node 1 instead of bacteria filters for temporary trace 
+contaminant control prior to docking of the U.S. 
+Laboratory Module to ISS and activation of the U.S. 
+Laboratory Module trace contaminant control subsystem 
+(TCCS), and Boeing – Huntsville estimated pressure 
+loss for the IMV inlet screens plus 10% margin.  The 
+different Node 1 IMV configurations that were analyzed 
+are summarized below: 
+ 
+ Node 1 to Node 3 Interface:  The analysis calculated 
+the pressure drop for this interface starting at the 
+Node 1 plenum duct inlet to the Node 1 nadir aft 
+interface.  The analysis includes the pressure drop 
+from some ducting, a manual THC isolation valve, 
+and an IMV valve.  It assumed the Node 1 nadir 
+midbay manual THC isolation valve is closed. 
+ Node 3 to U.S. Laboratory Module Interface (at AC):  
+The analysis calculated the pressure drop for this  
+ 
+interface starting at the Node 1 nadir forward 
+interface to the Node 1 forward port interface.  The 
+analysis includes the pressure drop from two IMV 
+valves and ducting. It assumed the Node 1 port and 
+forward manual THC isolation valves are closed. 
+ Node 1 to U.S. Laboratory Module Interface (during 
+assembly):  The analysis calculated the pressure 
+drop for this interface starting at the Node 1 forward 
+IMV inlet screen and exits Node 1 at the Node 1 
+forward port feedthrough.  The analysis includes the 
+pressure drop from the IMV inlet screen, a manual 
+THC isolation valve, some ducting, and an IMV 
+valve.  It assumes the Node 1 port manual THC 
+isolation valve and the Node 1 nadir forward IMV 
+valve are closed. 
+ Node 1 to Cupola Interface:  The Node 1 port 
+forward interface was analyzed to determine the 
+head pressure provided by the Node 1 port IMV fan.  
+The circuit in Node 1 includes an IMV inlet screen, 
+an IMV fan, two IMV mufflers, an IMV valve, and 
+some ducting.  The analysis calculates the head 
+pressure when the Node 1 to Cupola VAVDA is 
+closed and the Node 1 port IMV fan is providing > 
+3.68 cubic meter/min (130 cfm) to the Cupola. 
+ Node 1 to Airlock Interface:  The Node 1 starboard 
+aft interface was analyzed to verify the suction 
+pressure the Node 1 starboard aft IMV fan will 
+supply to the Joint Airlock ducting.  The circuit in 
+Node 1 contains an IMV valve, two mufflers, an IMV 
+fan, some ducting, and a linear diffuser.  The Node 1 
+starboard forward interface was not analyzed by 
+Boeing – Huntington Beach si nce that interface was 
+not planned to be used nominally for intermodule 
+ventilation since the return path to the Joint Airlock 
+will be normally through the hatch opening.   
+ U.S. Laboratory Module to MPLM at the Node 1 
+Nadir Interface (during assembly):  The analysis 
+calculated the pressure loss from the Node 1 
+forward starboard interface to the Node 1 nadir aft 
+interface including the IMV jumper duct.  The 
+analysis includes the pressure drop from two IMV 
+valves, a manual THC isolation valve, and ducting.  
+The analysis assumes both VAVDAs and the Node 
+1 plenum manual THC isolation valve are closed. 
+ Node 1 to Pressurized Mating Adapter (PMA) 1 
+Interface: The Node 1 aft port interface was 
+analyzed to verify the suction pressure the Node 1 
+aft IMV fan will supply to the PMA 1 ducting.  The 
+circuit in Node 1 contains an IMV valve, two 
+mufflers, an IMV fan, and two cabin air diffusers.  
+The Node 1 port manual THC isolation valve is 
+assumed closed for this verification.  The Node 1 aft 
+starboard interface was not analyzed by Boeing – 
+Huntington Beach since t hat interface was not 
+planned to be used nominally for intermodule 
+ventilation since the return path will be normally 
+through the hatch opening. 
+ Node 1 to PMA 3 at the Node 1 Nadir Interface 
+(during assembly):  The analysis calculated the 
+required Inlet ORU fan speed to provide > 30.5 mm- 
+H2O (1.2 in- H2O) suction pressure at the Node 1 
+
+=====PAGE 10=====
+ 10
+ 
+ 
+nadir aft interface at 3.40 cubic meter/min (120 cfm).  
+Since the plenum and the IMV leg providing suction 
+to PMA 3 are parallel the flow split for the two legs 
+was determined by an iteration process.  The PMA 3 
+suction leg included the pressure loss from an IMV 
+valve, a manual THC isolation valve, the Node 1 
+VAVDA, and ducting.  It assumed that the Node 1 
+forward starboard IMV valve and the Node 1 to 
+Cupola VAVDA were closed.  The charcoal filter 
+suction leg included the pressure loss from the four 
+charcoal filters, the bacte ria filter/housing assembly 
+and ducting.  Since the configuration included the 
+Inlet ORU the analysis had to consider the 
+performance capability of the Inlet ORU and the 
+pressure drop from ducting, the cabin air diffusers, 
+and the linear diffusers that the Inlet ORU is blowing 
+air out. 
+ U.S. Laboratory Module to Cupola Interface:  The 
+analysis calculated the flow split of cold air from the 
+U.S. Laboratory Module and ambient temperature 
+Node 1 air and still meet the specified flow rate and 
+head pressure requirements.   Since the Node 1 IMV 
+inlet screen leg and the Node 1 Cupola IMV leg 
+have a common tee with the same pressure level 
+and the flow versus pressure loss through both legs 
+based on different Node 1 Cupola VAVDA positions 
+the flow split can determined by an iteration process.  
+The U.S. Laboratory Module IMV leg included the 
+pressure loss from an IMV valve, the Node 1 to 
+Cupola VAVDA, and some ducting.  It assumed that 
+the Node 1 forward manual THC isolation valve, port 
+manual THC isolation valve, and the Node 1 nadir 
+forward IMV valve are closed.  The IMV inlet screen 
+leg included the pressure loss from the IMV inlet 
+screen and ducting.  The Node 1 Cupola IMV leg 
+included the pressure loss from an IMV valve, two 
+mufflers and some ducting and the pressure rise 
+from the IMV fan.  For t he analysis the resistance of 
+the Cupola was estimated based on the new flow 
+rate at the interface using the following equation: 
+ 
+Calculated Cupola = 0.17(new flow rate in  
+Resistance               cfm/130)**2 
+ 
+ U.S. Laboratory Module to Node 1 Interface: Since 
+the plenum and the IMV leg from the U.S. 
+Laboratory Module are parallel the flow split for the 
+two legs must be calculated such that they have the 
+same pressure loss just prior to the inlet of the Inlet 
+ORU.  Also, for a given Inlet ORU speed the suction 
+pressure at the inlet of the Inlet ORU must be equal 
+to the pressure loss from the two inlet legs.  The 
+analysis determined by an iterative process correct 
+flow split of the two inlet legs and the Inlet ORU flow 
+rate required to arrive at a steady state solution.  
+The U.S. Laboratory suction leg included the 
+pressure loss from an IMV valve, the Node 1 
+VAVDA, and ducting.  It assumed that the Node 1 
+nadir midbay manual THC isolation valve was 
+closed.  The bacteria filter leg suction leg included 
+the pressure  
+ 
+ 
+loss from the four bacteria filters, the bacteria 
+filter/housing assembly and ducting.  
+ For the Node 1 cabin temperature analysis Boeing – 
+Huntington Beach looked at best case and worse 
+case Node 1 heat loads of 500 W and 1542 W; 
+worst case and best case IMV exchange rate with 
+the U.S. Laboratory Module of 3.11cubic meter/ min 
+(110 cfm) and 3.96 cubic meter/min (140 cfm); and 
+an IMV supply temperature from the U.S. Laboratory 
+Module between 7.2ºC and 18.3ºC (45ºF and 65ºF). 
+ 
+Results: 
+ 
+ Node 1 to Node 3 Interface:  At 3.40 cubic meter/min 
+(120 cfm) the calculated pressure loss was 11.4 
+mm-H2O (0.45 in-H2O), which is less than the 
+specified maximum level of 11.9 mm-H2O (0.47 in-
+H2O). 
+ Node 3 to U.S. Laboratory Module Interface (at AC):  
+At 3.40 cubic meter/min (120 cfm) the calculated 
+pressure loss was 7.1 mm-H2O (0.28 in-H2O), 
+which is less than the specified maximum level of 
+7.4 mm-H2O (0.29 in-H2O). 
+ Node 1 to U.S. Laboratory Module Interface (during 
+assembly): At 3.54 cubic meter/min (125 cfm) the 
+calculated pressure loss was 8.6 mm-H2O (0.34 in-
+H2O), which is less than the specified maximum 
+level of 8.9 mm-H2O (0.35 in-H2O). 
+ Node 1 to Cupola Interface:  At 3.68 cubic meter/min 
+(130 cfm) the calculated head pressure was 4.3 
+mm-H2O (0.17 in-H2O), which meet the specified 
+level. 
+ Node 1 starboard aft to Airlock Interface:  At 3.26 
+cubic meter/min (115 cfm) the calculated suction 
+pressure at the Node 1 starboard aft interface was 
+11.9 mm-H2O (0.47 in-H2O), which is greater than 
+the specified minimum level of 11.4 mm-H2O (0.45 
+in-H2O). 
+ U.S. Laboratory Module to MPLM at the Node 1 
+Nadir Interface (during assembly):  At 3.96 cubic 
+meter/min (140 cfm) the calculated pressure loss 
+was 25.9 mm-H2O (1.02 in-H2O), which is less than 
+the Node 1 Requirement specified maximum level of 
+26.4 mm-H2O (1.04 in-H2O).  It should be noted that 
+the ICD and the Node 1 Requirement are in 
+disagreement for the pressure loss requirement but 
+the Node 1 Requirement is the controlling 
+requirement per the ICD.  
+ Node 1 aft port to PMA 1 Interface:  At 3.82 cubic 
+meter/min (135 cfm) the calculated suction pressure 
+was 3.3 mm-H2O (0.13 in-H2O), which meet the 
+specified level. 
+ Node 1 to PMA 3 at the Node 1 Nadir Interface 
+(during assembly):  The it erative process calculated 
+that the suction pressure at the Node 1 to PMA 3 
+interface would be 39.1 mm-H2O (1.54 in-H2O) at 
+3.40 cubic meter/min (120 cfm).  The flow rate for 
+
+=====PAGE 11=====
+the charcoal filter leg at 39.1 mm-H2O (1.54 in-H2O) 
+was calculated to be 6.66 cubic meter/min (235.4 
+cfm).  The Inlet ORU outlet pressure loss was 
+calculated to be 29.7 mm-H2O (1.17 in-H2O) at the  
+ 
+ 
+combined flow rate from the two suction legs of 
+10.06 cubic meter/min (355.4 cfm).  To provide the 
+flow rate of 10.06 cubic meter/min (355.4 cfm) and a 
+head pressure of the combined inlet and outlet legs 
+of 68.8 mm-H2O (2.71 in-H2O) the Inlet ORU has to 
+be commanded to a speed of 4951 revolutions per 
+minute (rpm). 
+ 11
+ U.S. Laboratory Module to Cupola Interface:  The 
+calculated flow split of cold air from the U.S. 
+Laboratory Module and ambient temperature Node 1 
+air with the Node 1 Cupola VAVDA being fully 
+closed (the far left side of the graph) to fully open 
+(the far right side of the graph) and all positions in 
+between is shown in the figure 3: 
+ 
+Cupola Parasitic Flow Rate
+0
+20
+40
+60
+80
+100
+120
+140
+160
+128 130 132 134 136 138 140 142
+Total Flow Rate to Cupola (in cfm)
+Flow Rate per Leg (in cfm)
+Flow Rate from U.S.
+Laboratory
+Flow Rate from Node 1 Grill 
+ 
+ 
+Figure 3 – Cupola Parasitic Flow Rate when Node 1 
+Cupola VAVDA is Fully Closed 
+ 
+ U.S. Laboratory Module to Node 1 Interface: The 
+calculated flow split of cold air from the U.S. 
+Laboratory Module and ambient temperature Node 1 
+air going through the four Node 1 bacteria filters with 
+the Node 1 VAVDA being fully closed (the far left 
+side of the graph) to fully open (the far right side of 
+the graph) and all positions in between with a Inlet 
+ORU speed of 4078 rpm is shown in the figure 4: 
+ 
+Node 1 Parasitic Flow Rate
+0
+50
+100
+150
+200
+250
+300
+350
+290 295 300 305 310 315 320 325 330 335 340
+Total Node 1 Flow Rate (in cfm)
+Flow Rate p er Leg  (in  c fm )
+Flow Rate from U.S. Laboratory
+Flow Rate from Node 1 Bacteria
+Filters
+ 
+ 
+Figure 4 - Node 1 Parasitic Flow Rate Based on Node 
+1 VAVDA Position 
+ 
+ The calculated Node 1 cabin temperature based on 
+the two different IMV exchange rates with the U.S. 
+Laboratory Module are shown in figure 5a and 5b: 
+ 
+ 
+Node 1 Temperature Predictions - 110 cfm IMV 
+Exchange w/U.S. Laboratory Module
+50.0
+70.0
+90.0
+110.0
+130.0
+0 500 1000 1500 2000
+Node 1 Heat Loads (W)
+Node 1 Cabin Temperature 
+(degF)
+U.S. Laboratory Supply
+Temp (45 degF)
+U.S. Laboratory Supply
+Temp (50 degF)
+U.S. Laboratory Supply
+Temp (55 degF)
+U.S. Laboratory Supply
+Temp (60 degF)
+Node 1 Temperature Predictions - 110 cfm IMV 
+Exchange w/U.S. Laboratory Module
+50.0
+70.0
+90.0
+110.0
+130.0
+0 500 1000 1500 2000
+Node 1 Heat Loads (W)
+Node 1 Cabin Temperature 
+(degF)
+U.S. Laboratory Supply
+Temp (45 degF)
+U.S. Laboratory Supply
+Temp (50 degF)
+U.S. Laboratory Supply
+Temp (55 degF)
+U.S. Laboratory Supply
+Temp (60 degF)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5a – Node 1 Temperature with 110 cfm IMV 
+Exchange with U.S. Laboratory Module 
+ 
+ Node 1 Temperature Predictions - 140 cfm IMV 
+Exchange w/U.S. Laboratory Module
+50.0
+70.0
+90.0
+110.0
+130.0
+0 500 1000 1500 2000
+Node 1 Heat Loads (W)
+Node 1 Cabin Temperature 
+(degF)
+U.S. Laboratory Supply
+Temp (45 degF)
+U.S. Laboratory Supply
+Temp (50 degF)
+U.S. Laboratory Supply
+Temp (55 degF)
+U.S. Laboratory Supply
+Temp (60 degF)
+Node 1 Temperature Predictions - 140 cfm IMV 
+Exchange w/U.S. Laboratory Module
+50.0
+70.0
+90.0
+110.0
+130.0
+0 500 1000 1500 2000
+Node 1 Heat Loads (W)
+Node 1 Cabin Temperature 
+(degF)
+U.S. Laboratory Supply
+Temp (45 degF)
+U.S. Laboratory Supply
+Temp (50 degF)
+U.S. Laboratory Supply
+Temp (55 degF)
+U.S. Laboratory Supply
+Temp (60 degF)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5b – Node 1 Temperature with 140 cfm IMV 
+Exchange with U.S. Laboratory Module 
+ 
+    To show compliance with the input voltage interface 
+requirement Boeing – Huntington Beach referenced the 
+electrical and data line drawing in their verification report 
+for the IMV fans, IMV valves, the VAVDAs, and the Inlet 
+ORU. 
+ 
+ 
+CONCLUSION 
+ 
+    The verification of Node 1 utilized a building block 
+approach from the Component Qualification data 
+through to the Element Level Verification.  This paper 
+provides a general overview of the nominal operation of 
+the THC subsystem in Node 1 and of the ISS ECLS 
+
+=====PAGE 12=====
+ 12
+Element Level Verification program for the THC 
+subsystem in Node 1.  It also showed that nominal 
+operation of the Node 1 THC subsystem that was 
+discussed in this paper met all of its Element 
+requirements. 
+ 
+ 
+ 
+REFERENCES 
+ 
+1. “Prime Item Development Specification for Node 
+1”; S684-10102, Revision J; November 20, 
+2002. 
+2. “Space Station Program Node Element 1 to 
+Node Element 3 Interface Control Document,  
+Part 1”; SSP 41140, Revision E; August 24, 
+2005. 
+3. “Node 1 Element to U.S. Laboratory Element 
+Interface Control Document, Part 1”; SSP 
+41141, Revision F; December 10, 2004. 
+4. “Node 1 Element to Airlock Element Interface 
+Control Document, Part 1”; SSP 41145, 
+Revision E plus IRN 41145-0074A; January 5, 
+2002. 
+5. “United States On-Orbit Segment to Italian Mini 
+Pressurized Logistics Module Interface Control 
+Document, Part 1”; SSP 42007, Revision H; 
+December 31, 2002. 
+6. “Pressurized Mating Adapter 2 & 3 to United 
+States Pressurized Elements (Node 1 to PMA-3)  
+Interface Control Document, Part 1, Appendix 
+D”; SSP 42097, Revision E, June 30, 2006. 
+7. “Resource Node 1 to Pressurized Mating 
+Adapter-1 Interface Control Document, Part 1”; 
+SSP 42122, Revision D plus IRN 0019, 0016, 
+and 0020; December 20, 2002. 
+8. Boeing – Huntington Beach; “International 
+Space Station Node 1 Cabin Ventilation ECLSS 
+Verification Analysis Report”; MDC 97H0453A; 
+April 1, 1998. 
+9. Boeing – Huntington Beach; “International 
+Space Station Particulate and Microbe Removal 
+ECLSS Verification Analysis Report”; MDC 
+96H0682B; January 30, 1998. 
+10. Boeing – Huntington Beach; “International 
+Space Station Node 1 Intermodule Ventilation 
+and Temperature Control ECLSS Verification 
+Analysis Report”; MDC 96H0512B; February 6, 
+1998. 
+ 
+ 
+CONTACT 
+ 
+David E. Williams 
+NASA, Lyndon B. Johnson Space Center /  
+Mail Stop: EC6 
+2101 NASA Parkway 
+Houston, TX 77058 
+ 
+ACRONYMS 
+ 
+ºC: degree celsius  
+ºF: degree fahrenheit 
+AC: Assembly Complete 
+ACS: Atmosphere Control and Supply 
+AR: Atmosphere Revitalization 
+ASHRAE: American Society of Heating, Refrigerating  
+ and Air Conditioning Engineers 
+CCAA: Common Cabin Air Assembly 
+cfm: cubic feet per minute 
+CFU: Colony Forming Unit 
+ECLS: Environmental Control and Life Support 
+EVA: Extravehicular Activity 
+FCS&I: Flight Crew System and Integration 
+FDS: Fire Detection and Suppression 
+fpm: feet per minute 
+H2O: water 
+ICD: Interface Control Document 
+IMV: Intermodule Ventilation 
+ISS: International Space Station 
+in: inch 
+KSC: Kennedy Space Center 
+MDM: Multiplexer/Demultiplexer 
+mg: milligram 
+min: minute 
+mm: millimeter 
+MPLM: Mini-Pressurized Logistic Module or Multi-  
+ Purpose Logistic Module 
+ORU: Orbital Replacement Unit 
+PIDS: Prime Item Development Specifications 
+PMA: Pressurized Mating Adapter 
+ppCO2 partial pressure of carbon dioxide 
+rpm: revolution per minute 
+RS: Russian Segment 
+SSP: Space Station Program 
+SSF: Space Station Freedom 
+TCCS: Trace Contaminant Control Subsystem 
+THC: Temperature and Humidity Control 
+U.S.: United States 
+USL: United States Laboratory 
+USOS: United States On-Orbit Segment 
+VAVDA: Variable Air Volume Damper Assembly 
+W: Watts 
+WRM: Water Recovery and Management 
+ 
+ 
+ 

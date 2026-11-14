@@ -1,0 +1,352 @@
+[
+ {
+  "ref_id": "REF-BASS2-POSTER",
+  "ntrs_id": "20160000593",
+  "title": "Combustion of Solids in Microgravity: Results from the BASS-II Experiment",
+  "authors": "Ferkul, P.V.; Bhattacharjee, S.; Fernandez-Pello, C.; Miller, F.; Olson, S.L.; Takahashi, F.; T'ien, J.S.",
+  "venue": "Poster, 30th Annual ASGSR Conference, Pasadena, CA, Oct 22-26, 2014",
+  "year": 2014,
+  "url": "https://ntrs.nasa.gov/citations/20160000593",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-OLSON2012",
+  "ntrs_id": "20130010991",
+  "title": "Evaluating Material Flammability in Microgravity and Martian Gravity Compared to the NASA Standard Normal Gravity Test",
+  "authors": "Olson, S.L.; Ferkul, P.V.",
+  "venue": "AIAA paper (NASA Glenn Research Center)",
+  "year": 2012,
+  "url": "https://ntrs.nasa.gov/citations/20130010991",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-MARCUM2016",
+  "ntrs_id": "20160012691",
+  "title": "Correlation of Normal Gravity Mixed Convection Blowoff Limits with Microgravity Forced Flow Blowoff Limits",
+  "authors": "Marcum, J.W.; Olson, S.L.; Ferkul, P.V.",
+  "venue": "2016 Spring Technical Meeting, Central States Section of the Combustion Institute, Knoxville, TN",
+  "year": 2016,
+  "url": "https://ntrs.nasa.gov/citations/20160012691",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-FERKUL2026",
+  "ntrs_id": "20260000646",
+  "title": "Material Flammability at Lunar and Martian Gravity",
+  "authors": "Ferkul, P.; Kralik, N.; Liao, Y.-T.",
+  "venue": "Lunar and Planetary Science Conference 2026 (abstract)",
+  "year": 2026,
+  "url": "https://ntrs.nasa.gov/citations/20260000646",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-LUCI2025",
+  "ntrs_id": "20250010653",
+  "title": "Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket",
+  "authors": "Ferkul, P.V.; Johnston, M.C.; Kralik, N.; Liao, Y.-T.",
+  "venue": "2025 Annual Meeting (ASGSR), Phoenix, AZ, Dec 3-6, 2025",
+  "year": 2025,
+  "url": "https://ntrs.nasa.gov/citations/20250010653",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-SAFFIRE123",
+  "ntrs_id": "20170008805",
+  "title": "Results of Large-Scale Spacecraft Flammability Tests",
+  "authors": "Ferkul, P.; Olson, S.; Urban, D.L.; Ruff, G.A.; Easton, J.; T'ien, J.S.; Liao, Y.-T.; Fernandez-Pello, A.C.; et al.",
+  "venue": "47th International Conference on Environmental Systems, Charleston, SC, July 16-20, 2017",
+  "year": 2017,
+  "url": "https://ntrs.nasa.gov/citations/20170008805",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-SAFFIRE45",
+  "ntrs_id": "20210011521",
+  "title": "Fire Safety Implications of Preliminary Results from Saffire IV and V Experiments on Large Scale Spacecraft Fires",
+  "authors": "Urban, D.L.; Ruff, G.A.; Ferkul, P.; Easton, J.; et al.",
+  "venue": "ICES-2021-266, 50th International Conference on Environmental Systems, 12-15 July 2021",
+  "year": 2021,
+  "url": "https://ntrs.nasa.gov/citations/20210011521",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-SAFFIRE6",
+  "ntrs_id": "20240002981",
+  "title": "Preliminary Results from the Saffire VI Experiment",
+  "authors": "Urban, D.L.; Ruff, G.A.; Ferkul, P.; Easton, J.; et al.",
+  "venue": "ICES-2024-365, 53rd International Conference on Environmental Systems, 21-25 July 2024",
+  "year": 2024,
+  "url": "https://ntrs.nasa.gov/citations/20240002981",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-ISSFLOW",
+  "ntrs_id": "20070018272",
+  "title": "International Space Station Temperature and Humidity Control Subsystem Verification for Node 1",
+  "authors": "NASA (ISS Node 1 THC verification)",
+  "venue": "NASA Technical Reports Server",
+  "year": 2007,
+  "url": "https://ntrs.nasa.gov/citations/20070018272",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-EXPATM",
+  "ntrs_id": "20220011152",
+  "title": "Open Atmospheres Forum: Exploration Atmospheres Validation Study",
+  "authors": "NASA",
+  "venue": "Open Atmospheres Forum, 2022",
+  "year": 2022,
+  "url": "https://ntrs.nasa.gov/citations/20220011152",
+  "kind": "NTRS"
+ },
+ {
+  "ref_id": "REF-CHALLENGE2026",
+  "ntrs_id": null,
+  "title": "Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data (challenge description)",
+  "authors": "NASA International Space Apps Challenge",
+  "venue": "spaceappschallenge.org",
+  "year": 2026,
+  "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+  "kind": "WEB"
+ },
+ {
+  "ref_id": "REF-PSI-25",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-25: Burning and Suppression of Solids - II",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-25",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-26",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-26: Burning and Suppression of Solids",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-26",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-98",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-98: Spacecraft Fire Safety Experiment-I",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-98",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-99",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-99: Spacecraft Fire Experiment-II",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-99",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-100",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-100: Spacecraft Fire Experiment-III",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-100",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-101",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-101: Smoke Aerosol Measurement Experiment-Reflight",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-101",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-102",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-102: Smoke and Aerosol Measurement Experiment",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-102",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-47",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-47: Dust and Aerosol Measurement Feasibility Test / Dust and Aerosol Measurement Feasibility Test-2",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-47",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-115",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-115: Utilization of the Smoke Aerosol Measurement Experiment Data for Advanced Modeling and Simulation of Smoke Generation in Micro-Gravity",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-115",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-69",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-69: Flame Extinguishment Experiment",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-69",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-68",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-68: Flame Extinguishment Experiment - 2",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-68",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-117",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-117: Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-117",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-142",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-142: Quantitative Studies of Cool Flame Transitions at Radiation / Stretch Extinction Using Counterflow Flames",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-142",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-62",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-62: Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-62",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-60",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-60: Computational and Experimental Analysis of SPICE Data Sets",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-60",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-10",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-10: Advanced Combustion via Microgravity Experiments / Flame Design",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-10",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-20",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-20: Advanced Combustion via Microgravity Experiments - Burning Rate Emulator",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-20",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-21",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-21: Advanced Combustion via Microgravity Experiments / Coflow Laminar Diffusion Flame",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-21",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-22",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-22: Advanced Combustion via Microgravity Experiments Electric-Field Effects on Laminar Diffusion Flames",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-22",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-23",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-23: Advanced Combustion via Microgravity Experiments-Structure and Response of Spherical Diffusion Flames",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-23",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-39",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-39: Cool Flames Investigation",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-39",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-159",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-159: Advanced Combustion via Microgravity Experiments / Cool Flames Investigation with Gases",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-159",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-106",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-106: Structure and Liftoff In Combustion Experiment",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-106",
+  "kind": "PSI"
+ },
+ {
+  "ref_id": "REF-PSI-107",
+  "ntrs_id": null,
+  "title": "NASA PSI investigation record PSI-107: Smoke Point In Co-flow Experiment",
+  "authors": "NASA Physical Sciences Informatics (PSI)",
+  "venue": "NASA PSI repository",
+  "year": null,
+  "url": "https://psi.nasa.gov/physci/repo/data/investigation/PSI-107",
+  "kind": "PSI"
+ }
+]
