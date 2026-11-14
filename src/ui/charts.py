@@ -5,19 +5,21 @@ import plotly.graph_objects as go
 
 from ..engine import G_LABEL, G_LEVELS, State, coverage_matrix, limit_table, measurements_df, paired_comparison
 
-# Okabe-Ito colour-blind-safe palette
-C = {"orange": "#E69F00", "sky": "#56B4E9", "green": "#009E73", "yellow": "#F0E442", "blue": "#0072B2",
-     "verm": "#D55E00", "pink": "#CC79A7", "grey": "#9aa3b8"}
-MAT_COLOR = {"Mylar G": C["sky"], "Ultem 1000": C["orange"], "Nomex HT90-40": C["green"], "PMMA": C["pink"]}
-BG, PANEL, GRID, TXT = "rgba(0,0,0,0)", "#141b2f", "#2a3350", "#e6e9f2"
+# Material hues are colour-blind safe and avoid the status colours (red = flammable, green = sub-limit).
+C = {"orange": "#E69F00", "sky": "#56B4E9", "pink": "#CC79A7", "grey": "#9CA3AF", "blue": "#38BDF8",
+     "hot": "#EF4444", "safe": "#10B981", "caution": "#F59E0B"}
+MAT_COLOR = {"Mylar G": C["sky"], "Ultem 1000": C["orange"], "Nomex HT90-40": C["pink"], "PMMA": C["blue"]}
+BG, PANEL, GRID, TXT = "rgba(0,0,0,0)", "#111827", "#1F2937", "#F3F4F6"
+FONT = "JetBrains Mono, Fira Code, Consolas, monospace"
 
 
 def _base(fig: go.Figure, title: str, height: int = 420) -> go.Figure:
-    fig.update_layout(title=dict(text=title, x=0, font=dict(size=15)), height=height, paper_bgcolor=BG,
-                      plot_bgcolor=PANEL, font=dict(color=TXT, size=12), margin=dict(l=50, r=20, t=55, b=50),
-                      legend=dict(orientation="h", y=-0.22), hoverlabel=dict(bgcolor="#0b1020"))
-    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID)
-    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID)
+    fig.update_layout(title=dict(text=title, x=0, font=dict(size=13, family=FONT, color=TXT)), height=height,
+                      paper_bgcolor=BG, plot_bgcolor=PANEL, font=dict(color=TXT, size=11, family=FONT),
+                      margin=dict(l=55, r=20, t=50, b=60), legend=dict(orientation="h", y=-0.25, font=dict(size=10)),
+                      hoverlabel=dict(bgcolor="#0B0F17", bordercolor="#1F2937", font=dict(family=FONT, size=11)))
+    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=GRID)
+    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=GRID)
     return fig
 
 
@@ -32,12 +34,13 @@ def limits_by_gravity(state: State) -> go.Figure:
                for g, u, m, p, r, pg in zip(d["g_level"], d["uloi"], d["moc"], d["pressure_kpa"], d["ref_id"],
                                             d["page_or_figure"])]
         fig.add_trace(go.Scatter(x=d["g_level"], y=d["uloi"], mode="lines+markers", name=f"{mat}: survives (ULOI)",
-                                 line=dict(color=col, width=2), marker=dict(size=9), hovertext=hov, hoverinfo="text"))
+                                 line=dict(color=col, width=2), marker=dict(size=8), hovertext=hov, hoverinfo="text"))
         fig.add_trace(go.Scatter(x=d["g_level"], y=d["moc"], mode="lines+markers", name=f"{mat}: self-extinguishes (MOC)",
                                  line=dict(color=col, width=2, dash="dot"), marker=dict(size=8, symbol="diamond-open"),
                                  hovertext=hov, hoverinfo="text"))
-    fig.add_hline(y=state.o2, line=dict(color=C["verm"], width=2), annotation_text=f"selected O2 {state.o2:g} %",
-                  annotation_position="top left", annotation_font_color=C["verm"])
+    fig.add_hline(y=state.o2, line=dict(color=C["blue"], width=2, dash="dash"),
+                  annotation_text=f"SELECTED O2 {state.o2:g}%", annotation_position="top left",
+                  annotation_font=dict(color=C["blue"], family=FONT, size=11))
     fig.update_xaxes(title="Gravity level (g)", tickvals=G_LEVELS, ticktext=["0", "0.16", "0.38", "1"])
     fig.update_yaxes(title="Limiting O2 (mole %)")
     return _base(fig, "Limiting oxygen by gravity level (measured, drop-tower criteria for reduced g)", 440)
@@ -48,19 +51,22 @@ def o2_flow_map(state: State) -> go.Figure:
     df = measurements_df()
     d = df[df["o2_mole_pct"].notna() & df["flow_velocity_cm_s"].notna() & (df["outcome"] != "limit")]
     sym = {"burn": "circle", "anchored": "square", "partial": "triangle-up", "no_spread": "x", "no_ignition": "x"}
-    col = {"burn": C["orange"], "anchored": C["yellow"], "partial": C["sky"], "no_spread": C["grey"]}
+    col = {"burn": C["hot"], "anchored": C["caution"], "partial": C["sky"], "no_spread": C["grey"]}
     fig = go.Figure()
     for oc, grp in d.groupby("outcome"):
         hov = [f"{r.material}<br>{r.outcome}, {G_LABEL[r.g_level]}<br>O2 {r.o2_mole_pct:g} %, flow {r.flow_velocity_cm_s:g} cm/s"
                f"<br>{'P ' + format(r.pressure_kpa, 'g') + ' kPa' if r.pressure_kpa == r.pressure_kpa else 'P not stated'}"
                f"<br>{r.ref_id} {r.page_or_figure}" for r in grp.itertuples()]
         fig.add_trace(go.Scatter(x=grp["flow_velocity_cm_s"], y=grp["o2_mole_pct"], mode="markers", name=oc.replace("_", " "),
-                                 marker=dict(size=12, symbol=sym.get(oc, "circle"), color=col.get(oc, C["grey"]),
-                                             line=dict(width=1, color="#fff")), hovertext=hov, hoverinfo="text"))
+                                 marker=dict(size=11, symbol=sym.get(oc, "circle"), color=col.get(oc, C["grey"]),
+                                             line=dict(width=1, color="#0B0F17")), hovertext=hov, hoverinfo="text"))
+    fig.add_hline(y=state.o2, line=dict(color=C["blue"], width=1.5, dash="dash"),
+                  annotation_text=f"O2 {state.o2:g}%", annotation_position="top left",
+                  annotation_font=dict(color=C["blue"], family=FONT, size=10))
     if state.flow_cm_s is not None:
-        fig.add_trace(go.Scatter(x=[state.flow_cm_s], y=[state.o2], mode="markers", name="your selection",
-                                 marker=dict(size=16, symbol="star", color=C["verm"], line=dict(width=1, color="#fff")),
-                                 hovertext=[f"Selected: O2 {state.o2:g} %, flow {state.flow_cm_s:g} cm/s"], hoverinfo="text"))
+        fig.add_vline(x=state.flow_cm_s, line=dict(color=C["blue"], width=1.5, dash="dash"),
+                      annotation_text=f"{state.flow_cm_s:g} cm/s", annotation_position="top right",
+                      annotation_font=dict(color=C["blue"], family=FONT, size=10))
     fig.update_xaxes(title="Flow velocity (cm/s)", range=[0, 35])
     fig.update_yaxes(title="Ambient O2 (mole %)")
     return _base(fig, "Where NASA has tested: ambient O2 x flow (Saffire I-VI; all ISS/Cygnus flights, 0 g)", 420)
@@ -89,7 +95,7 @@ def coverage_heatmap() -> go.Figure:
             ("long_duration_gt_60s", "Long-duration (ISS/Cygnus)")]
     z = [[int(cov.loc[i, c]) for c, _ in cols] for i in cov.index]
     fig = go.Figure(go.Heatmap(z=z, x=[n for _, n in cols], y=list(cov["label"]), text=z, texttemplate="%{text}",
-                               colorscale=[[0, "#3a1f1f"], [0.001, "#1b3a5c"], [1, "#56B4E9"]], showscale=False,
+                               colorscale=[[0, "#4A3410"], [0.001, "#12324A"], [1, "#38BDF8"]], showscale=False,
                                hovertemplate="%{y}<br>%{x}: %{z} record(s)<extra></extra>", xgap=3, ygap=3))
     fig.update_yaxes(autorange="reversed")
-    return _base(fig, "Data coverage: number of source-cited records (0 = gap, shown dark red)", 340)
+    return _base(fig, "Data coverage: number of source-cited records (0 = gap, shown amber)", 340)

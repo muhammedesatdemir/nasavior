@@ -16,3 +16,4 @@ Nothing is estimated, interpolated or generated. Fields a source does not state 
 - Saffire VI per-sample heat release/CO/CO2 columns were garbled in text extraction and are not transcribed.
 - PSI investigation URLs follow the PSI web-app route `/physci/repo/data/investigation/<id>`; the page is JavaScript-rendered so the link could not be tested without a browser.
 - PSI start/end dates are not used (some look inconsistent, e.g. SAFFIRE-I).
+- Olson & Ferkul 2012 states in its Conclusions that Martian limits were "up to 5.75% O2 lower" than 1 g, but its Table I shows 5.75 is the Lunar value for Mylar (the largest Martian value is 3.35). We use Table I and its Eq. 1.

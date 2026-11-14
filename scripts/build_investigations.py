@@ -107,9 +107,10 @@ NTRS_ONLY = [
                      "Test 1 and to microgravity forced-flow limits.",
         "o2_range_pct": None, "pressure_range_kpa": None, "flow_range_cm_s": None, "ranges_ref": None,
         "key_findings": [
-            F("Martian-gravity limiting oxygen was up to 5.75% O2 lower than normal gravity for the three materials "
-              "tested (Mylar, Ultem, Nomex); reduced-g criteria differ from 1g due to 5.18 s drop times.",
-              "REF-OLSON2012", "Table I, Conclusions (p.6, p.8)"),
+            F("Oxygen margin of safety versus 1 g was negative in reduced gravity for Mylar, Ultem and Nomex "
+              "(Martian: -3.1, -1.7, -3.35 % O2; Lunar: -5.75, -2.8, -2.35 % O2), so 1 g screening limits were not "
+              "conservative for these materials. Reduced-g criteria differ from 1 g because drop tests last 5.18 s.",
+              "REF-OLSON2012", "Table I (p.6)"),
             F("Some materials that do not burn in 1g will burn in 0g with a low-speed flow or in partial gravity such as "
               "Lunar-g. Evidence suggests Lunar gravity could be more hazardous: flame spread rate peaks there and "
               "the oxygen needed for flammability reaches a minimum near Lunar g.",
