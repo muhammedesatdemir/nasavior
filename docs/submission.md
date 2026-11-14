@@ -79,7 +79,9 @@ Code was written with the help of an AI coding assistant (Claude Code, Anthropic
 
 ## Team
 
-`<<names and roles>>`
+- Muhammed Esat Demir: Software & Product Lead (application, interface, deployment)
+- Kevser Demir: Data & Science Lead (NASA source review, data extraction and verification)
+- Both: demo video and submission
 
 ---
 

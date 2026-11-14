@@ -119,6 +119,11 @@ docs/submission.md          Text for the Space Apps project page
 
 Code was written with the help of an AI coding assistant (Claude Code). The idea, the data selection, the source extraction checks and the design decisions are the team's. The application itself contains no generative model: search is BM25 over cited records. See [docs/submission.md](docs/submission.md).
 
+## Team
+
+- **Muhammed Esat Demir**, Software & Product Lead: application, interface, deployment.
+- **Kevser Demir**, Data & Science Lead: NASA source review, data extraction and verification.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). NASA documents remain subject to their own terms of use.
